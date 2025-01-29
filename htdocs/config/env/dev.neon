@@ -1,0 +1,8 @@
+includes:
+	- base.neon
+
+parameters:
+    environment: development
+
+services:
+    cache.storage: Nette\Caching\Storages\DevNullStorage
