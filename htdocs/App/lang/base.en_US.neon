@@ -1,0 +1,33 @@
+search:
+	new_search: "new search"
+	results_number: "number of results"
+	search: "search"
+	search_results: "Found records"
+	all: "All"
+
+value:
+	false: "FALSE"
+	no: "YES"
+	true: "PRAVDA"
+	yes: "NO"
+
+action:
+	accept: "Accept"
+	close: "close"
+	open: "open"
+	save: "save"
+	search: "search"
+	download: "download"
+	loading: "loading"
+	continue: "Continue"
+	moreinfo: "More info"
+	detail: "detail"
+	more: "more"
+	error: "Error: "
+	next: "Next"
+	previous: "Previous"
+
+seo:
+    keywords: "vascular plants, plants, flora, database, botany"
+    description: ""
+    author: " Jihočeská univerzita"

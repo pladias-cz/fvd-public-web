@@ -1,0 +1,33 @@
+search:
+	new_search: "nové hledání"
+	results_number: "počet výsledků"
+	search: "hledat"
+	search_results: "Nalezené záznamy"
+	all: "Vše"
+
+value:
+	false: "NEPRAVDA"
+	no: "ANO"
+	true: "PRAVDA"
+	yes: "NE"
+
+action:
+	accept: "V pořádku"
+	close: "zavřít"
+	open: "otevřít"
+	save: "uložit"
+	search: "hledat"
+	download: "stáhnout"
+	loading: "načítání"
+	continue: "pokračovat"
+	moreinfo: "více informací"
+	detail: "detail"
+	more: "více"
+	error: "Chyba: "
+	next: "Předchozí"
+	previous: "Další"
+
+seo:
+    keywords: "cévnaté rostliny, rostliny, flóra, květena, databáze, botanika"
+    description: ""
+    author: "Jihočeská univerzita"

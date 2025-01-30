@@ -6,3 +6,6 @@ parameters:
 
 services:
     cache.storage: Nette\Caching\Storages\DevNullStorage
+
+session:
+    debugger: true

@@ -1,6 +1,16 @@
 extensions:
-    contributte.console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
-    contributte.console.extra: Contributte\Console\Extra\DI\ConsoleBridgesExtension(%consoleMode%)
+	translation: Contributte\Translation\DI\TranslationExtension
+	contributte.console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
+	contributte.console.extra: Contributte\Console\Extra\DI\ConsoleBridgesExtension(%consoleMode%)
 
 contributte.console:
-	url: http://localhost
+	url: http://localhost/
+
+translation:
+	locales:
+		whitelist: [cs,en, de]
+		default: cs
+		fallback: [cs_CZ, cs]
+	dirs:
+		- %appDir%/lang
+	returnOriginalMessage: true # to not translate undefined messages, default is true

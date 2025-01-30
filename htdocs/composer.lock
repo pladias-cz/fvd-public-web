@@ -4,41 +4,173 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4fe0f0b7aa21273f22f7bc1ffdda70c3",
+    "content-hash": "639ff8a503b066965fe6281a8fc54828",
     "packages": [
         {
-            "name": "contributte/console",
-            "version": "v0.9.4",
+            "name": "68publishers/asset",
+            "version": "v3.3.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/contributte/console.git",
-                "reference": "1021a24c98dff6ecdf4cc3d77cc3db159959b45c"
+                "url": "https://github.com/68publishers/asset.git",
+                "reference": "b7ff755221b60778b406b582a05d150cf36b60ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/console/zipball/1021a24c98dff6ecdf4cc3d77cc3db159959b45c",
-                "reference": "1021a24c98dff6ecdf4cc3d77cc3db159959b45c",
+                "url": "https://api.github.com/repos/68publishers/asset/zipball/b7ff755221b60778b406b582a05d150cf36b60ea",
+                "reference": "b7ff755221b60778b406b582a05d150cf36b60ea",
                 "shasum": ""
             },
             "require": {
-                "contributte/di": "^0.5.1|^0.6.0",
-                "php": ">=7.2",
-                "symfony/console": "^4.2.9|^5.0.0|^6.0.0"
+                "latte/latte": "^2.5 || ^3.0",
+                "nette/di": "^3.0.10",
+                "nette/utils": "^3.2.5 || ^4.0",
+                "php": "^7.4 || ^8.0",
+                "symfony/asset": "^5.4 || ^6.0 || ^7.0"
+            },
+            "conflict": {
+                "nette/schema": "<1.2.0"
             },
             "require-dev": {
-                "nette/http": "^3.0.1",
-                "ninjify/nunjuck": "^0.4",
-                "ninjify/qa": "^0.13.0",
-                "phpstan/phpstan": "^1.8.11",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-nette": "^1.1.0",
-                "phpstan/phpstan-strict-rules": "^1.4.4",
-                "symfony/event-dispatcher": "^4.3 || ^5.0 || ^6.0"
+                "friendsofphp/php-cs-fixer": "^3.13",
+                "nette/application": "^3.1.0",
+                "nette/bootstrap": "^3.1",
+                "nette/tester": "^2.4.3",
+                "phpstan/phpstan": "^1.9",
+                "phpstan/phpstan-nette": "^1.1",
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SixtyEightPublishers\\Asset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tomáš Glawaty",
+                    "email": "tomasglawaty@icloud.com"
+                }
+            ],
+            "description": "Integration of Symfony's Asset component into Nette Framework.",
+            "keywords": [
+                "68publishers",
+                "asset",
+                "nette"
+            ],
+            "support": {
+                "issues": "https://github.com/68publishers/asset/issues",
+                "source": "https://github.com/68publishers/asset/tree/v3.3.4"
+            },
+            "time": "2024-08-05T23:21:30+00:00"
+        },
+        {
+            "name": "68publishers/webpack-encore-bundle",
+            "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/68publishers/webpack-encore-bundle.git",
+                "reference": "75d712ca1eab156cc104615bec7f71e5ae5d0e0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/68publishers/webpack-encore-bundle/zipball/75d712ca1eab156cc104615bec7f71e5ae5d0e0b",
+                "reference": "75d712ca1eab156cc104615bec7f71e5ae5d0e0b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "latte/latte": "^3.0",
+                "nette/di": "^3.2",
+                "nette/utils": "^4.0",
+                "php": "^8.3",
+                "symfony/asset": "^7.0",
+                "symfony/cache": "^7.0"
+            },
+            "conflict": {
+                "nette/schema": "<1.2.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.13",
+                "mockery/mockery": "^1.5",
+                "nette/application": "^3.1.0",
+                "nette/bootstrap": "^3.1",
+                "nette/component-model": "^3.0.2",
+                "nette/tester": "^2.4.3",
+                "phpstan/phpstan": "^1.9",
+                "phpstan/phpstan-nette": "^1.1",
+                "roave/security-advisories": "dev-latest",
+                "symfony/console": "^7.0",
+                "symfony/event-dispatcher": "^7.0"
+            },
+            "suggest": {
+                "68publishers/asset": "The recommended way to get Symfony Asset Component into your project.",
+                "contributte/console": "The recommended way to get Symfony Console into your project."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SixtyEightPublishers\\WebpackEncoreBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tomáš Glawaty",
+                    "email": "tomasglawaty@icloud.com"
+                }
+            ],
+            "description": "Nette integration with Webpack Encore! https://symfony.com/webpack-encore",
+            "keywords": [
+                "68publishers",
+                "nette",
+                "webpack",
+                "webpack-encore",
+                "webpack-encore-bundle"
+            ],
+            "support": {
+                "issues": "https://github.com/68publishers/webpack-encore-bundle/issues",
+                "source": "https://github.com/68publishers/webpack-encore-bundle/tree/v3.2.0"
+            },
+            "time": "2025-01-10T23:45:52+00:00"
+        },
+        {
+            "name": "contributte/console",
+            "version": "v0.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/contributte/console.git",
+                "reference": "dc2b84fb8dd795ea9988f396311aeed435aed495"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/contributte/console/zipball/dc2b84fb8dd795ea9988f396311aeed435aed495",
+                "reference": "dc2b84fb8dd795ea9988f396311aeed435aed495",
+                "shasum": ""
+            },
+            "require": {
+                "nette/di": "^3.1.8",
+                "php": ">=8.1",
+                "symfony/console": "^6.4.2 || ^7.0.2"
+            },
+            "require-dev": {
+                "contributte/phpstan": "^0.1",
+                "contributte/qa": "^0.4",
+                "contributte/tester": "^0.4",
+                "mockery/mockery": "^1.6.7",
+                "nette/http": "^3.2.3",
+                "symfony/event-dispatcher": "^6.4.2 || ^7.0.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.10.x-dev"
+                    "dev-master": "0.11.x-dev"
                 }
             },
             "autoload": {
@@ -65,7 +197,7 @@
             ],
             "support": {
                 "issues": "https://github.com/contributte/console/issues",
-                "source": "https://github.com/contributte/console/tree/v0.9.4"
+                "source": "https://github.com/contributte/console/tree/v0.10.1"
             },
             "funding": [
                 {
@@ -77,43 +209,41 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-17T08:31:22+00:00"
+            "time": "2024-01-04T20:10:58+00:00"
         },
         {
             "name": "contributte/console-extra",
-            "version": "v0.7.2",
+            "version": "v0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contributte/console-extra.git",
-                "reference": "2deeadc71090e3483feeca41200a4179d7c589ef"
+                "reference": "09e14dcde8676828976c4c86bd912c8a67835975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/console-extra/zipball/2deeadc71090e3483feeca41200a4179d7c589ef",
-                "reference": "2deeadc71090e3483feeca41200a4179d7c589ef",
+                "url": "https://api.github.com/repos/contributte/console-extra/zipball/09e14dcde8676828976c4c86bd912c8a67835975",
+                "reference": "09e14dcde8676828976c4c86bd912c8a67835975",
                 "shasum": ""
             },
             "require": {
-                "contributte/di": "^0.5.0",
-                "php": ">=7.2",
-                "symfony/console": "^4.0.0 || ^5.0.0 || ^6.0.0"
+                "nette/di": "^3.1.8",
+                "php": ">=8.1",
+                "symfony/console": "^6.4.2 || ^7.0.2"
             },
             "conflict": {
                 "nette/schema": "<1.0.1"
             },
             "require-dev": {
-                "contributte/console": "~0.7",
-                "latte/latte": "^2.6.0",
-                "nette/application": "^3.1.3",
-                "nette/bootstrap": "^3.1.1",
-                "nette/caching": "^3.1.1",
-                "nette/security": "^3.1.1",
-                "ninjify/nunjuck": "^0.4",
-                "ninjify/qa": "^0.13",
-                "phpstan/phpstan": "^1.0.0",
-                "phpstan/phpstan-deprecation-rules": "^1.0.0",
-                "phpstan/phpstan-nette": "^1.0.0",
-                "phpstan/phpstan-strict-rules": "^1.0.0"
+                "contributte/console": "~0.10",
+                "contributte/phpstan": "^0.1",
+                "contributte/qa": "^0.4",
+                "contributte/tester": "^0.4",
+                "latte/latte": "^3.0.12",
+                "mockery/mockery": "^1.5.0",
+                "nette/application": "^3.1.14",
+                "nette/bootstrap": "^3.2.1",
+                "nette/caching": "^3.2.3",
+                "nette/security": "^3.1.8"
             },
             "suggest": {
                 "contributte/console": "Symfony\\Console for Nette"
@@ -121,7 +251,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.7.x-dev"
+                    "dev-master": "0.9.x-dev"
                 }
             },
             "autoload": {
@@ -148,7 +278,7 @@
             ],
             "support": {
                 "issues": "https://github.com/contributte/console-extra/issues",
-                "source": "https://github.com/contributte/console-extra/tree/v0.7.2"
+                "source": "https://github.com/contributte/console-extra/tree/v0.8.0"
             },
             "funding": [
                 {
@@ -160,7 +290,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-06-15T07:40:08+00:00"
+            "time": "2024-01-04T12:17:40+00:00"
         },
         {
             "name": "contributte/di",
@@ -237,6 +367,93 @@
                 }
             ],
             "time": "2023-09-05T08:23:55+00:00"
+        },
+        {
+            "name": "contributte/translation",
+            "version": "v2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/contributte/translation.git",
+                "reference": "8dedfb0746ee32da06d38d23e1f8e46fe5cabdf5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/contributte/translation/zipball/8dedfb0746ee32da06d38d23e1f8e46fe5cabdf5",
+                "reference": "8dedfb0746ee32da06d38d23e1f8e46fe5cabdf5",
+                "shasum": ""
+            },
+            "require": {
+                "latte/latte": "^2.6|^3.0.12",
+                "nette/di": "^3.0.6",
+                "nette/finder": "^2.5.2|~3.0.0",
+                "nette/http": "^3.0.7",
+                "nette/neon": "^3.3.1",
+                "nette/routing": "^3.0",
+                "nette/schema": "^1.0",
+                "nette/utils": "^3.2.1|~4.0.0",
+                "php": "^8.0.2",
+                "symfony/config": "^6.0|^7.0",
+                "symfony/translation": "^6.0|^7.0"
+            },
+            "require-dev": {
+                "doctrine/orm": "^2.8",
+                "mockery/mockery": "^1.4",
+                "nette/application": "^3.1.0",
+                "nette/bootstrap": "^3.2.1",
+                "nette/database": "^3.1.1",
+                "nette/robot-loader": "^3.4.0|~4.0.0",
+                "nette/tester": "^2.3.1",
+                "ninjify/nunjuck": "^0.4.0",
+                "ninjify/qa": "^0.13",
+                "phpstan/phpstan": "^1.8",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-nette": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.1",
+                "psr/log": "^1.1|^2.0|^3.0",
+                "tracy/tracy": "^2.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Contributte\\Translation\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ales Wita"
+                }
+            ],
+            "description": "Symfony/Translation integration for Nette Framework.",
+            "homepage": "https://github.com/contributte/translation",
+            "keywords": [
+                "nette",
+                "symfony",
+                "translation"
+            ],
+            "support": {
+                "issues": "https://github.com/contributte/translation/issues",
+                "source": "https://github.com/contributte/translation/tree/v2.0.5"
+            },
+            "funding": [
+                {
+                    "url": "https://contributte.org/partners.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/f3l1x",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-03-20T10:14:53+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1846,6 +2063,59 @@
             "time": "2025-01-10T04:57:37+00:00"
         },
         {
+            "name": "nette/finder",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/finder.git",
+                "reference": "027395c638637de95c8e9fad49a7c51249404ed2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/finder/zipball/027395c638637de95c8e9fad49a7c51249404ed2",
+                "reference": "027395c638637de95c8e9fad49a7c51249404ed2",
+                "shasum": ""
+            },
+            "require": {
+                "nette/utils": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🔍 Nette Finder: find files and directories with an intuitive API.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "filesystem",
+                "glob",
+                "iterator",
+                "nette"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/finder/issues",
+                "source": "https://github.com/nette/finder/tree/v3.0.0"
+            },
+            "time": "2022-12-14T17:05:54+00:00"
+        },
+        {
             "name": "nette/http",
             "version": "v3.3.2",
             "source": {
@@ -2884,6 +3154,324 @@
             "time": "2024-09-11T13:17:53+00:00"
         },
         {
+            "name": "symfony/asset",
+            "version": "v7.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/asset.git",
+                "reference": "cb926cd59fefa1f9b4900b3695f0f846797ba5c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/asset/zipball/cb926cd59fefa1f9b4900b3695f0f846797ba5c0",
+                "reference": "cb926cd59fefa1f9b4900b3695f0f846797ba5c0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "conflict": {
+                "symfony/http-foundation": "<6.4"
+            },
+            "require-dev": {
+                "symfony/http-client": "^6.4|^7.0",
+                "symfony/http-foundation": "^6.4|^7.0",
+                "symfony/http-kernel": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Asset\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Manages URL generation and versioning of web assets such as CSS stylesheets, JavaScript files and image files",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/asset/tree/v7.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-10-25T15:15:23+00:00"
+        },
+        {
+            "name": "symfony/cache",
+            "version": "v7.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/cache.git",
+                "reference": "8d773a575e446de220dca03d600b2d8e1c1c10ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/8d773a575e446de220dca03d600b2d8e1c1c10ec",
+                "reference": "8d773a575e446de220dca03d600b2d8e1c1c10ec",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "psr/cache": "^2.0|^3.0",
+                "psr/log": "^1.1|^2|^3",
+                "symfony/cache-contracts": "^2.5|^3",
+                "symfony/deprecation-contracts": "^2.5|^3.0",
+                "symfony/service-contracts": "^2.5|^3",
+                "symfony/var-exporter": "^6.4|^7.0"
+            },
+            "conflict": {
+                "doctrine/dbal": "<3.6",
+                "symfony/dependency-injection": "<6.4",
+                "symfony/http-kernel": "<6.4",
+                "symfony/var-dumper": "<6.4"
+            },
+            "provide": {
+                "psr/cache-implementation": "2.0|3.0",
+                "psr/simple-cache-implementation": "1.0|2.0|3.0",
+                "symfony/cache-implementation": "1.1|2.0|3.0"
+            },
+            "require-dev": {
+                "cache/integration-tests": "dev-master",
+                "doctrine/dbal": "^3.6|^4",
+                "predis/predis": "^1.1|^2.0",
+                "psr/simple-cache": "^1.0|^2.0|^3.0",
+                "symfony/clock": "^6.4|^7.0",
+                "symfony/config": "^6.4|^7.0",
+                "symfony/dependency-injection": "^6.4|^7.0",
+                "symfony/filesystem": "^6.4|^7.0",
+                "symfony/http-kernel": "^6.4|^7.0",
+                "symfony/messenger": "^6.4|^7.0",
+                "symfony/var-dumper": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Cache\\": ""
+                },
+                "classmap": [
+                    "Traits/ValueWrapper.php"
+                ],
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides extended PSR-6, PSR-16 (and tags) implementations",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "caching",
+                "psr6"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/cache/tree/v7.2.3"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-01-27T11:08:17+00:00"
+        },
+        {
+            "name": "symfony/cache-contracts",
+            "version": "v3.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/cache-contracts.git",
+                "reference": "15a4f8e5cd3bce9aeafc882b1acab39ec8de2c1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/15a4f8e5cd3bce9aeafc882b1acab39ec8de2c1b",
+                "reference": "15a4f8e5cd3bce9aeafc882b1acab39ec8de2c1b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/cache": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
+                "branch-alias": {
+                    "dev-main": "3.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\Cache\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to caching",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/cache-contracts/tree/v3.5.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-25T14:20:29+00:00"
+        },
+        {
+            "name": "symfony/config",
+            "version": "v7.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/config.git",
+                "reference": "7716594aaae91d9141be080240172a92ecca4d44"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/config/zipball/7716594aaae91d9141be080240172a92ecca4d44",
+                "reference": "7716594aaae91d9141be080240172a92ecca4d44",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/filesystem": "^7.1",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "symfony/finder": "<6.4",
+                "symfony/service-contracts": "<2.5"
+            },
+            "require-dev": {
+                "symfony/event-dispatcher": "^6.4|^7.0",
+                "symfony/finder": "^6.4|^7.0",
+                "symfony/messenger": "^6.4|^7.0",
+                "symfony/service-contracts": "^2.5|^3",
+                "symfony/yaml": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Config\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Helps you find, load, combine, autofill and validate configuration values of any kind",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/config/tree/v7.2.3"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-01-22T12:07:01+00:00"
+        },
+        {
             "name": "symfony/console",
             "version": "v6.4.17",
             "source": {
@@ -3043,6 +3631,72 @@
                 }
             ],
             "time": "2024-09-25T14:20:29+00:00"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v7.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "b8dce482de9d7c9fe2891155035a7248ab5c7fdb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/b8dce482de9d7c9fe2891155035a7248ab5c7fdb",
+                "reference": "b8dce482de9d7c9fe2891155035a7248ab5c7fdb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/polyfill-ctype": "~1.8",
+                "symfony/polyfill-mbstring": "~1.8"
+            },
+            "require-dev": {
+                "symfony/process": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides basic utilities for the filesystem",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/filesystem/tree/v7.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-10-25T15:15:23+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -3738,6 +4392,179 @@
                 }
             ],
             "time": "2024-11-13T13:31:26+00:00"
+        },
+        {
+            "name": "symfony/translation",
+            "version": "v7.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/translation.git",
+                "reference": "e2674a30132b7cc4d74540d6c2573aa363f05923"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/e2674a30132b7cc4d74540d6c2573aa363f05923",
+                "reference": "e2674a30132b7cc4d74540d6c2573aa363f05923",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/translation-contracts": "^2.5|^3.0"
+            },
+            "conflict": {
+                "symfony/config": "<6.4",
+                "symfony/console": "<6.4",
+                "symfony/dependency-injection": "<6.4",
+                "symfony/http-client-contracts": "<2.5",
+                "symfony/http-kernel": "<6.4",
+                "symfony/service-contracts": "<2.5",
+                "symfony/twig-bundle": "<6.4",
+                "symfony/yaml": "<6.4"
+            },
+            "provide": {
+                "symfony/translation-implementation": "2.3|3.0"
+            },
+            "require-dev": {
+                "nikic/php-parser": "^4.18|^5.0",
+                "psr/log": "^1|^2|^3",
+                "symfony/config": "^6.4|^7.0",
+                "symfony/console": "^6.4|^7.0",
+                "symfony/dependency-injection": "^6.4|^7.0",
+                "symfony/finder": "^6.4|^7.0",
+                "symfony/http-client-contracts": "^2.5|^3.0",
+                "symfony/http-kernel": "^6.4|^7.0",
+                "symfony/intl": "^6.4|^7.0",
+                "symfony/polyfill-intl-icu": "^1.21",
+                "symfony/routing": "^6.4|^7.0",
+                "symfony/service-contracts": "^2.5|^3",
+                "symfony/yaml": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "Resources/functions.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\Translation\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides tools to internationalize your application",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/translation/tree/v7.2.2"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-12-07T08:18:10+00:00"
+        },
+        {
+            "name": "symfony/translation-contracts",
+            "version": "v3.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/translation-contracts.git",
+                "reference": "4667ff3bd513750603a09c8dedbea942487fb07c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/4667ff3bd513750603a09c8dedbea942487fb07c",
+                "reference": "4667ff3bd513750603a09c8dedbea942487fb07c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
+                "branch-alias": {
+                    "dev-main": "3.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\Translation\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Test/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to translation",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/translation-contracts/tree/v3.5.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-25T14:20:29+00:00"
         },
         {
             "name": "symfony/var-exporter",

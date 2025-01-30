@@ -17,10 +17,15 @@
 		"tracy/tracy": "^2.10",
     "contributte/console": "^v0.9",
     "contributte/console-extra": "^v0.7",
+    "contributte/translation": "^v2",
+    "contributte/console": "^v0",
+    "contributte/console-extra": "^v0",
     "nettrine/orm": "^0.8",
     "nettrine/dbal": "^v0.8.2",
     "nettrine/cache": "^0.3",
-    "nettrine/migrations": "^v0.9"
+    "nettrine/migrations": "^v0.9",
+    "68publishers/asset": "^3",
+    "68publishers/webpack-encore-bundle": "^3"
   },
 	"require-dev": {
 		"symfony/thanks": "^1"

@@ -6,6 +6,7 @@ includes:
 
 	# Extensions
 	- ../ext/contributte.neon
+	- ../ext/68publishers.neon
 
 php:
 	date.timezone: Europe/Prague
@@ -16,7 +17,7 @@ session:
 	autoStart: true
 
 latte:
-	locale: en
+	locale: cs
 	strictTypes: yes
 	strictParsing: no
 

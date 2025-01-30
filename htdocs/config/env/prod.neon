@@ -3,3 +3,6 @@ includes:
 
 parameters:
     environment: 'production'
+
+di:
+    lazy: true
