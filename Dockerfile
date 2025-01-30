@@ -4,4 +4,4 @@ LABEL org.opencontainers.image.description="FloraVltavaDonau"
 ARG GIT_TAG
 ENV GIT_TAG=$GIT_TAG
 
-COPY htdocs /var/www/html
+COPY  --chown=www:www htdocs /app
