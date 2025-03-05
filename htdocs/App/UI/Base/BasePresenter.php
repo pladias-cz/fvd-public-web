@@ -3,6 +3,7 @@
 namespace App\UI\Base;
 
 use Nette\Application\UI\Presenter;
+use Contributte\Translation\Translator;
 
 abstract class BasePresenter extends Presenter
 {
@@ -22,4 +23,34 @@ abstract class BasePresenter extends Presenter
 
     /** @persistent */
     public $locale;
+
+    /** @var Translator @inject */
+    public $translator;
+
+    public function beforeRender()
+    {
+        $this->setLocale();
+        parent::beforeRender();
+    }
+
+private function setLocale()
+{
+    switch ($this->locale) {
+        case self::LOCALE_CS:
+            setlocale(LC_ALL, "cs_CZ.UTF-8");
+            break;
+        case self::LOCALE_DE:
+            setlocale(LC_ALL, 'de_DE', 'de', 'German', 'de.UTF-8');
+            break;
+        case self::LOCALE_EN:
+            setlocale(LC_ALL, "en_US.UTF-8");
+            break;
+        default:
+            $this->locale = self::LOCALE_CS;
+            setlocale(LC_ALL, "cs_CZ.UTF-8");
+            break;
+    }
+    $this->template->locale = $this->locale;
 }
+}
+

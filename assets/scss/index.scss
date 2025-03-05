@@ -3,6 +3,7 @@
 
 :root {
     --primary: #5b3d29;
+    --light: hsl(from var(--primary) h s 90%);
     --font: "Source Sans Pro";
     --spacer: 4px;
 }
@@ -17,8 +18,21 @@ pre {font-family: var(--font);}
 
 #content, footer {padding: calc(var(--spacer) * 3);}
 
-navigation {background: var(--primary); color: white; display: flex; align-items: center; justify-content: flex-start; padding: calc(var(--spacer) * 1);}
-navigation img {height: 8rem; width: auto;}
+footer {background: var(--light);}
+
+nav {background: var(--primary); color: white; display: flex; align-items: center; justify-content: space-between; padding: calc(var(--spacer) * 2); gap: calc(var(--spacer) * 6);}
+nav .logo {display: flex; align-items: center; justify-content: center;}
+nav .logo img {height: 6rem; width: auto;}
+.nav-links {flex-grow: 1; display: flex; justify-content: space-between; flex-wrap: wrap;}
+
+.nav-links > div {display: flex; gap: calc(var(--spacer) * 4);}
+.nav-links > div a {color: white; text-decoration: none; font-size: 125%; border-bottom: 2px solid transparent;}
+.nav-links > div a:hover, .nav-links > div a.active {border-bottom: 2px solid white;}
 
 .project-logos {display: flex; flex-wrap: wrap; gap: calc(var(--spacer) * 10); margin-top: calc(var(--spacer) * 5);}
 .project-logos img {height: 4rem; width: auto;}
+
+// tohle předělat na něco schopného
+.roll-parent {anchor-name: --my-anchor;}
+.rolls {background: red; border-radius: 10px; display: flex; flex-direction: column; position: absolute;
+    position-anchor: --my-anchor; position-area: bottom;}
