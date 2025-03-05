@@ -1,3 +1,6 @@
+project:
+	name: "Rostliny podél hranice"
+
 search:
 	new_search: "nové hledání"
 	results_number: "počet výsledků"

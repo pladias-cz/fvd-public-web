@@ -1,19 +1,24 @@
-@import "@fortawesome/fontawesome-free/css/all.css";
-@import "bootstrap/dist/css/bootstrap.min.css";
+// @import "@fortawesome/fontawesome-free/css/all.css";
+// @import "bootstrap/dist/css/bootstrap.min.css";
 
-html, body {
-    height: 100%;
+:root {
+    --primary: #5b3d29;
+    --font: "Source Sans Pro";
+    --spacer: 4px;
 }
+
 body {
-    display: flex;
-    flex-direction: column;
-}
-.content {
-    flex: 1;
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
 }
 
-footer {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    text-align: center;
-}
+pre {font-family: var(--font);}
+
+#content, footer {padding: calc(var(--spacer) * 3);}
+
+navigation {background: var(--primary); color: white; display: flex; align-items: center; justify-content: flex-start; padding: calc(var(--spacer) * 1);}
+navigation img {height: 8rem; width: auto;}
+
+.project-logos {display: flex; flex-wrap: wrap; gap: calc(var(--spacer) * 10); margin-top: calc(var(--spacer) * 5);}
+.project-logos img {height: 4rem; width: auto;}

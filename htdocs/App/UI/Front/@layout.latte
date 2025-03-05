@@ -1,12 +1,8 @@
 {layout '../Base/@layout.latte'}
-    {block main}
-<header>
+{block navigation}
+<navigation><img src="{$basePath}/images/project-logo-light.svg"></navigation>
 
-
-</header>
-    <main class="content">
-    <div class="container-fluid">
-        <h2>FloraVltavaDonau.eu </h2>
-        </div>
-    </main>
-    {/block}
+<a class="{if $presenter->isLinkCurrent('Home:')}active{/if}" n:href="Home:">{_menu.homepage}</a>
+<a class="{if $presenter->isLinkCurrent('Home:about')}active{/if}" n:href="Home:about">{_menu.about}</a>
+<a class="{if $presenter->isLinkCurrent('Home:contact')}active{/if}" n:href="Home:contact">{_menu.contact}</a>
+{/block}
