@@ -31,7 +31,7 @@ nav .logo img {height: 6rem; width: auto;}
 .nav-links {flex-grow: 1; display: flex; justify-content: space-between; flex-wrap: wrap;}
 
 .nav-links > div {display: flex; gap: calc(var(--spacer) * 4);}
-.nav-links > div a {color: white; text-decoration: none; font-size: 125%; border-bottom: 2px solid transparent; text-transform: uppercase;}
+.nav-links > div a {color: white; text-decoration: none; font-size: 125%; border-bottom: 2px solid transparent; text-transform: uppercase; transition: 0.1s;}
 .nav-links > div a:hover, .nav-links > div a.active {border-bottom: 2px solid white;}
 
 .dropdown-parent {display: flex; align-items: center;}
