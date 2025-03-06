@@ -29,6 +29,7 @@ a:hover {text-decoration: none; color: hsl(from var(--secondary) h s 35%);}
 #content, footer {padding: calc(var(--spacer) * 3);}
 
 .emoji {font-family: "Noto Emoji"; font-optical-sizing: auto;}
+.text-bold {font-weight: bold;}
 
 .container {max-width: var(--max-container-width); margin-left: auto; margin-right: auto;}
 .grid-span-2 {grid-column: span 2;}
@@ -55,10 +56,12 @@ nav .logo img {height: 6rem; width: auto;}
 
 .contact-container {display: grid; grid-template-columns: 1fr 3fr; gap: var(--spacer3); align-items: start;}
 .contact-institution {margin-bottom: var(--spacer2); display: flex; flex-direction: column; gap: var(--spacer3); align-items: flex-start;}
-.contact-institution  img {max-height: 7rem; width: auto; max-width: 100%;}
+.contact-institution img {max-height: 7rem; width: auto; max-width: 100%;}
 
-.contact-names {display: grid; grid-template-columns: 2fr 3fr; gap: var(--spacer3)}
-.contact-names > span:nth-child(2n+1) {display: grid; grid-template-columns: 0.5fr 1fr; gap: var(--spacer3)}
+.contact-names {gap: var(--spacer3); display: flex; flex-direction: column;}
+.contact-names > div {display: grid; grid-template-columns: 2fr 2.5fr; gap: var(--spacer3); padding: var(--spacer2);}
+.contact-names > div:nth-child(2n+1) {background: var(--light);}
+.contact-names > div > span:nth-child(2n+1) {display: grid; grid-template-columns: 0.5fr 1fr; gap: var(--spacer3)}
 
 .m-0 {margin: 0;}
 .mb-0 {margin-bottom: 0;}
@@ -75,6 +78,6 @@ nav .logo img {height: 6rem; width: auto;}
 
 @media (max-width: 800px) {
     .contact-container {grid-template-columns: 1fr;}
-    .contact-names > span:nth-child(2n+1) {display: flex; gap: var(--spacer); flex-direction: column;}
+    .contact-names > div > span:nth-child(2n+1) {display: flex; gap: var(--spacer); flex-direction: column;}
     .d-sm-none {display: none;}
 }
