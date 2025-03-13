@@ -1,8 +1,36 @@
 {layout '../Base/@layout.latte'}
 {block navigation}
-<navigation><img src="{$basePath}/images/project-logo-light.svg"></navigation>
+<nav>
+<div class="container">
 
+<a class="logo" n:href="Home:"><img src="{$basePath}/images/project-logo-light.svg"></a>
+
+<div class="nav-links">
+<div>
 <a class="{if $presenter->isLinkCurrent('Home:')}active{/if}" n:href="Home:">{_menu.homepage}</a>
-<a class="{if $presenter->isLinkCurrent('Home:about')}active{/if}" n:href="Home:about">{_menu.about}</a>
+{* <a class="{if $presenter->isLinkCurrent('Home:about')}active{/if}" n:href="Home:about">{_menu.about}</a> *}
 <a class="{if $presenter->isLinkCurrent('Home:contact')}active{/if}" n:href="Home:contact">{_menu.contact}</a>
+
+{* <div class="dropdown">
+    <a class="dropdown-parent" href="#">Test roll</a>
+    
+    <div class="dropdown-content">
+    <a href="#">Test roll 2</a>
+    <a href="#">Test roll 3</a>
+    </div>
+</div> *}
+
+</div>
+
+
+<div>
+<a data-language="cs" class="{if $locale == 'cs'}active{/if}" href="{link this,locale=>cs}">cs</a>
+<a data-language="de" class="{if $locale == 'de'}active{/if}" href="{link this,locale=>de}">de</a>
+<a data-language="en" class="{if $locale == 'en'}active{/if}" href="{link this,locale=>en}">en</a>
+</div>
+
+</div>
+
+</div>
+</nav>
 {/block}
