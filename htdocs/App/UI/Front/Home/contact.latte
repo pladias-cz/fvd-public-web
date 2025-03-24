@@ -3,14 +3,14 @@
 
 <div class="contact-container">
     <div class="contact-institution">
-        <pre class="m-0"><strong>Katedra botaniky
-Přírodovědecká fakulta
-Jihočeská univerzita</strong>
-Branišovská 1760
-370 05
-České Budějovice
-Česká republika
-</pre>
+        <p class="m-0"><strong>{_contacts.institutions.department}<br>
+{_contacts.institutions.department2}<br>
+{_contacts.institutions.universitySouth}</strong><br>
+Branišovská 1760<br>
+370 05<br>
+České Budějovice<br>
+{_contacts.Czechia}
+</p>
         <a href="http://botanika.prf.jcu.cz">botanika.prf.jcu.cz</a>
 
         <img src="{$basePath}/images/jcu.jpg">
@@ -22,9 +22,7 @@ Branišovská 1760
             <span><a href="mailto:stech@prf.jcu.cz"><span class="emoji">✉️</span><span class="d-sm-none">
                         stech@prf.jcu.cz</span></a></span>
         </span>
-        <span>hlavní koordinátor projektu, správa databází, komunikace s partnery, sběr dat o rozšíření druhů,
-            koordinace revize kritických skupin, koordinace výzkumu, komunikace s partnery a místními, prezentace
-            projektu, vedení exkurzí a workshopů</span>
+        <span>{_contacts.stech_description}</span>
     </div>
 
     <div>
@@ -33,8 +31,7 @@ Branišovská 1760
             <span><a href="mailto:Karel.Boublik@seznam.cz"><span class="emoji">✉️</span><span class="d-sm-none">
                         Karel.Boublik@seznam.cz</span></a></span>
         </span>
-        <span>sběr vegetačních dat, terénní výzkum se zaměřením na ohrožené biotopy, tvorba dlouhodobého plánu ochrany
-            diverzity rostlin s důrazem na vegetační změny jejich stanovišť,vedení workshopů a exkurzí</span>
+        <span>{_contacts.boublik_description}</span>
     </div>
 
     <div>
@@ -43,7 +40,7 @@ Branišovská 1760
             <span><a href="mailto:viktorie.brozova@gmail.com"><span class="emoji">✉️</span><span class="d-sm-none">
                         viktorie.brozova@gmail.com</span></a></span>
         </span>
-        <span>PR managerka</span>
+        <span>{_contacts.brozova_position}</span>
     </div>
 
     <div>
@@ -52,7 +49,7 @@ Branišovská 1760
             <span><a href="mailto:rbunesova@prf.jcu.cz"><span class="emoji">✉️</span><span class="d-sm-none">
                         rbunesova@prf.jcu.cz</span></a></span>
         </span>
-        <span>projektová managerka</span>
+        <span>{_contacts.bunesova_position}</span>
     </div>
 
     <div>
@@ -61,7 +58,7 @@ Branišovská 1760
             <span><a href="mailto:tomaskeb@gmail.com"><span class="emoji">✉️</span><span class="d-sm-none">
                         tomaskeb@gmail.com</span></a></span>
         </span>
-        <span>správa webových stránek</span>
+        <span>{_contacts.kebert_position}</span>
     </div>
 
     <div>
@@ -70,8 +67,7 @@ Branišovská 1760
             <span><a href="mailto:kobrik@atlas.cz"><span class="emoji">✉️</span><span class="d-sm-none">
                         kobrik@atlas.cz</span></a></span>
         </span>
-        <span>sběr dat o rozšíření druhů se zaměřením na kritické skupiny, tvorba dlouhodobého plánu ochrany
-            specializovaných skupin rostlin a jejich biotopů</span>
+        <span>{_contacts.kotilinek_description}</span>
     </div>
 
     <div>
@@ -80,8 +76,7 @@ Branišovská 1760
             <span><a href="mailto:Lepsi@seznam.cz"><span class="emoji">✉️</span><span class="d-sm-none">
                         Lepsi@seznam.cz</span></a></span>
         </span>
-        <span>sběr dat o rozšíření druhů se zaměřením na kritické skupiny, tvorba dlouhodobého plánu ochrany
-            specializovaných skupin rostlin a jejich biotopů, vedení workshopů a exkurzí</span>
+        <span>{_contacts.lepsi_description}</span>
     </div>
 
     <div>
@@ -90,9 +85,7 @@ Branišovská 1760
             <span><a href="mailto:mlucanova@jcu.cz"><span class="emoji">✉️</span><span class="d-sm-none">
                         mlucanova@jcu.cz</span></a></span>
         </span>
-        <span>sběr dat o rozšíření druhů se zaměřením na invazní rostliny, koordinace výzkumu, analýza dat z
-            molekulárních a cytometrických analýz, tvorba dlouhodobého plánu ochrany diverzity rostlin z pohledu
-            populační genetiky</span>
+        <span>{_contacts.lucanova_description}</span>
     </div>
 
     <div>
@@ -101,8 +94,7 @@ Branišovská 1760
             <span><a href="mailto:a.manukjanova@gmail.com"><span class="emoji">✉️</span><span class="d-sm-none">
                         a.manukjanova@gmail.com</span></a></span>
         </span>
-        <span>technické zajištění cytometrických a molekulárních analýz, analýza prvních hrubých dat molekulárních
-            technik</span>
+        <span>{_contacts.manukjanova_description}</span>
     </div>
 
     <div>
@@ -111,20 +103,21 @@ Branišovská 1760
             <span><a href="mailto:krkabol@gmail.com"><span class="emoji">✉️</span><span class="d-sm-none">
                         krkabol@gmail.com</span></a></span>
         </span>
-        <span>programování a správa databází, analýza prostorových dat a jejich vyhodnocení, softwarové řešení sběru občanské vědy</span>
+        <span>{_contacts.novotny_description}</span>
     </div>
 
-    <span class="grid-span-2">Spolupracující botanici: Jindřich Chrtek, Petr Lepší, Bohumil Trávníček</span>
+    <span class="grid-span-2">{_contacts.collaborating_botanists}: Jindřich Chrtek, Petr Lepší, Bohumil Trávníček</span>
 </div>
 </div>
 
 <div class="contact-container mt-5">
     <div class="contact-institution">
-        <pre class="m-0"><strong>Správa Národního parku Šumava</strong>
-1. máje 260
-385 01
-Vimperk
-Česká republika</pre>
+        <p class="m-0"><strong>{_contacts.institutions.nationalParkSumava}</strong><br>
+1. máje 260<br>
+385 01<br>
+Vimperk<br>
+{_contacts.Czechia}
+</p>
         <a href="http://npsumava.cz">npsumava.cz</a>
 
         <img src="{$basePath}/images/np_sumava.jpg">
@@ -137,7 +130,7 @@ Vimperk
             <span><a href="mailto:romana.rouckova@npsumava.cz">✉️<span class="d-sm-none">
                         romana.rouckova@npsumava.cz</span></a></span>
         </span>
-        <span>monitoring ohrožených druhů, sběr dat o rozšíření druhů</span>
+        <span>{_contacts.rouckova_description}</span>
     </div>
 
     <div>
@@ -146,7 +139,7 @@ Vimperk
             <span><a href="mailto:david.pubal@npsumava.cz">✉️<span class="d-sm-none">
                         david.pubal@npsumava.cz</span></a></span>
         </span>
-        <span>sběr dat o rozšíření druhů</span>
+        <span>{_contacts.pubal_description}</span>
     </div>
 </div>
 </div>
@@ -154,12 +147,12 @@ Vimperk
 
 <div class="contact-container mt-5">
     <div class="contact-institution">
-        <pre class="m-0"><strong>Agentura ochrany přírody a krajiny ČR</strong>
-Regionálního pracoviště Jižní Čechy
-nám. Přemysla Otakara II 34
-370 01 České Budějovice
-Česká republika
-</pre>
+        <p class="m-0"><strong>{_contacts.institutions.natureConservationAgency}</strong><br>
+{_contacts.institutions.natureConservationAgency2}<br>
+nám. Přemysla Otakara II 34<br>
+370 01 České Budějovice<br>
+{_contacts.Czechia}
+</p>
         <a href="https://aopk.gov.cz/">aopk.gov.cz</a>
         <img src="{$basePath}/images/aopk.png">
     </div>
@@ -170,7 +163,7 @@ nám. Přemysla Otakara II 34
             <span><a href="mailto:jana.janakova@aopk.gov.cz">✉️<span class="d-sm-none">
                         jana.janakova@aopk.gov.cz</span></a></span>
         </span>
-        <span>tvorba dlouhodobého plánu ochrany rostlinné biodiverzity, sběr dat o rozšíření rostlin</span>
+        <span>{_contacts.janakova_description}</span>
     </div>
 
     <div>
@@ -179,17 +172,18 @@ nám. Přemysla Otakara II 34
             <span><a href="mailto:jiri.bures@aopk.gov.cz">✉️<span class="d-sm-none">
                         jiri.bures@aopk.gov.cz</span></a></span>
         </span>
-        <span>koordinace výměny dat o rozšíření druhů</span>
+        <span>{_contacts.bures_description}</span>
     </div>
 </div>
 </div>
 
 <div class="contact-container mt-5">
     <div class="contact-institution">
-        <pre class="m-0"><strong>OÖ Landes-Kultur GmbH</strong>
-Museumstraße 14
-4020 Linz
-Rakousko</pre>
+        <p class="m-0"><strong>{_contacts.institutions.ooLandesCulture}</strong><br>
+Museumstraße 14<br>
+4020 Linz<br>
+{_contacts.Austria}
+</p>
         <a href="https://www.ooekultur.at/">ooekultur.at</a>
         <img src="{$basePath}/images/oo-landeskultur.png">
     </div>
@@ -199,7 +193,7 @@ Rakousko</pre>
             <span>Christian Bräuchler</span>
             <span><a href="mailto:Christian.Braeuchler@ooelkg.at">✉️<span class="d-sm-none"> Christian.Braeuchler@ooelkg.at</span></a></span>
         </span>
-        <span>koordinátor projektu, správa databází, prezentace projektu, komunikace s partnery</span>
+        <span>{_contacts.brauchler_description}</span>
     </div>
 
     <div>
@@ -207,7 +201,7 @@ Rakousko</pre>
             <span>Michael Malicky</span>
             <span><a href="mailto:Michael.Malicky@ooelkg.at">✉️<span class="d-sm-none"> Michael.Malicky@ooelkg.at</span></a></span>
         </span>
-        <span>programování a správa databází</span>
+        <span>{_contacts.malicky_description}</span>
     </div>
 
     <div>
@@ -215,19 +209,34 @@ Rakousko</pre>
             <span>Gerhard Kleesadl</span>
             <span><a href="mailto:Gerhard.Kleesadl@ooelkg.at">✉️<span class="d-sm-none"> Gerhard.Kleesadl@ooelkg.at</span></a></span>
         </span>
-        <span>sběr dat o rozšíření druhů</span>
+        <span>{_contacts.kleesadl_description}</span>
     </div>
+
+    <div>
+        <span>
+            <span>Tobias Nigl</span>
+            <span><a href="mailto:Tobias.Nigl@ooelkg.at	">✉️<span class="d-sm-none"> Tobias.Nigl@ooelkg.at	</span></a></span>
+        </span>
+        <span>{_contacts.nigl_description}</span>
+    </div>
+    <div>
+        <span>
+            <span>Hans-Peter Reinthaler</span>
+            <span><a href="mailto:Hans-Peter.Reinthaler@ooelkg.at">✉️<span class="d-sm-none"> Hans-Peter.Reinthaler@ooelkg.at</span></a></span>
+        </span>
+        <span>{_contacts.reinthaler_description}</span>
+    </div>
+
     </div>
 </div>
 
 <div class="contact-container mt-5">
     <div class="contact-institution">
-        <pre class="m-0"><strong>University of Vienna
-Faculty of Life Sciences
-Department of Botany and Biodiversity Research</strong>
-Universitätsring 1
-1010 Wien
-Rakousko</pre>
+        <p class="m-0"><strong>{_contacts.institutions.universityVienna}</strong><br>
+Universitätsring 1<br>
+1010 Wien<br>
+{_contacts.Austria}
+</p>
         <a href="https://botanik.univie.ac.at/">botanik.univie.ac.at
 </a>
         <img src="{$basePath}/images/uni_wien.jpg">
@@ -239,13 +248,11 @@ Rakousko</pre>
             <span><a href="mailto:luise.ehrendorfer@univie.ac.at">✉️<span class="d-sm-none">
                         luise.ehrendorfer@univie.ac.at</span></a></span>
         </span>
-        <span>poskytnutí dat z univerzitní databáze</span>
+        <span>{_contacts.ehrendorfer_description}</span>
     </div>
 
-    <span class="grid-span-2">Spolupracující botanici: Christian Schröck (<a href="mailto:Christian.Schroeck@ooelkg.at">Christian.Schroeck@ooelkg.at</a>)</div>
+    <span class="grid-span-2">{_contacts.collaborating_botanists}: Christian Schröck (<a href="mailto:Christian.Schroeck@ooelkg.at">Christian.Schroeck@ooelkg.at</a>)</div>
 </div>
 </div>
-
-
 
 {/block}

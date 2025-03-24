@@ -1,0 +1,56 @@
+Czechia: "Česká republika"
+Austria: "Rakousko"
+
+institutions:
+    department: "Katedra botaniky"
+    department2: "Přírodovědecká fakulta"
+    universitySouth: "Jihočeská univerzita"
+    nationalParkSumava: "Správa Národního parku Šumava"
+    natureConservationAgency: "Agentura ochrany přírody a krajiny ČR"
+    natureConservationAgency2: "Regionální pracoviště Jižní Čechy"
+    ooLandesCulture: "OÖ Landes-Kultur GmbH"
+    universityVienna: "University of Vienna"
+    universityVienna2: "Faculty of Life Sciences"
+    universityVienna3: "Department of Botany and Biodiversity Research"
+
+stech_description: "hlavní koordinátor projektu, správa databází, komunikace s partnery, sběr dat o rozšíření druhů, koordinace revize kritických skupin, koordinace výzkumu, komunikace s partnery a místními, prezentace projektu, vedení exkurzí a workshopů"
+
+boublik_description: "sběr vegetačních dat, terénní výzkum se zaměřením na ohrožené biotopy, tvorba dlouhodobého plánu ochrany diverzity rostlin s důrazem na vegetační změny jejich stanovišť, vedení workshopů a exkurzí"
+
+brozova_position: "PR managerka"
+
+bunesova_position: "projektová managerka"
+
+kebert_position: "správa webových stránek"
+
+kotilinek_description: "sběr dat o rozšíření druhů se zaměřením na kritické skupiny, tvorba dlouhodobého plánu ochrany specializovaných skupin rostlin a jejich biotopů"
+
+lepsi_description: "sběr dat o rozšíření druhů se zaměřením na kritické skupiny, tvorba dlouhodobého plánu ochrany specializovaných skupin rostlin a jejich biotopů, vedení workshopů a exkurzí"
+
+lucanova_description: "sběr dat o rozšíření druhů se zaměřením na invazní rostliny, koordinace výzkumu, analýza dat z molekulárních a cytometrických analýz, tvorba dlouhodobého plánu ochrany diverzity rostlin z pohledu populační genetiky"
+
+manukjanova_description: "technické zajištění cytometrických a molekulárních analýz, analýza prvních hrubých dat molekulárních technik"
+
+novotny_description: "programování a správa databází, analýza prostorových dat a jejich vyhodnocení, softwarové řešení sběru občanské vědy"
+
+collaborating_botanists: "Spolupracující botanici"
+
+rouckova_description: "monitoring ohrožených druhů, sběr dat o rozšíření druhů"
+
+pubal_description: "sběr dat o rozšíření druhů"
+
+janakova_description: "tvorba dlouhodobého plánu ochrany rostlinné biodiverzity, sběr dat o rozšíření rostlin"
+
+bures_description: "koordinace výměny dat o rozšíření druhů"
+
+brauchler_description: "koordinátor projektu, správa databází, prezentace projektu, komunikace s partnery"
+
+malicky_description: "programování a správa databází"
+
+kleesadl_description: "sběr dat o rozšíření druhů"
+
+nigl_description: "zpracování dat pro propojení databází"
+
+reinthaler_description: "zpracování dat pro propojení databází"
+
+ehrendorfer_description: "poskytnutí dat z univerzitní databáze"
