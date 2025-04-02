@@ -15,6 +15,10 @@
     --max-container-width: 1300px;
 }
 
+h1, h2, h3, h4, h5, h6 {width: max-content; max-width: 100%;}
+h1 {border-bottom: 4px solid var(--quarternary); margin-top: calc(var(--spacer) * 2);}
+h2 {border-bottom: 2px solid var(--quarternary);}
+
 body {
     font-family: var(--font);
     margin: 0;
@@ -26,7 +30,14 @@ pre {font-family: var(--font);}
 a {text-decoration: none; color: var(--secondary);}
 a:hover {text-decoration: none; color: hsl(from var(--secondary) h s 35%);}
 
+p:has(+ ul) {margin-bottom: calc(var(--spacer) / 2);}
+p + ul {margin-top: 0;}
+
 #content, footer {padding: calc(var(--spacer) * 3);}
+
+table {border-collapse: collapse;}
+table td {padding: calc(var(--spacer));}
+table tr:nth-child(2n) {background: var(--light)}
 
 .emoji {font-family: "Noto Emoji"; font-optical-sizing: auto;}
 .text-bold {font-weight: bold;}
@@ -46,13 +57,21 @@ nav .logo img {height: 6rem; width: auto;}
 .nav-links > div a {color: white; text-decoration: none; font-size: 125%; border-bottom: 2px solid transparent; text-transform: uppercase; transition: 0.1s;}
 .nav-links > div a:hover, .nav-links > div a.active {border-bottom: 2px solid white;}
 
+@media (max-width: 800px) {
+    .nav-links {gap: calc(var(--spacer) * 2);}
+    nav > div {flex-wrap: wrap; align-items: flex-start;}
+    .nav-links > div {flex-wrap: wrap; row-gap: calc(var(--spacer) / 2);}
+}
+
 .dropdown-parent {display: flex; align-items: center;}
 .dropdown-parent:after {content: ''; display: inline-block; width: 25px; height: 25px; background: url("../ui-images/dropdown-arrow.svg") center center no-repeat;}
 .dropdown-content {display: none;}
-.dropdown-content.triggered {display: flex; position: absolute; margin-top: 10px; flex-direction: column; padding: calc(var(--spacer) * 3); border-radius: var(--border-radius); background: var(--primary);}
+.dropdown-content.triggered {display: flex; position: absolute; margin-top: 10px; flex-direction: column; padding: calc(var(--spacer) * 3); border-radius: var(--border-radius); background: var(--primary); row-gap: var(--spacer);}
 
 .project-logos {display: flex; flex-wrap: wrap; gap: calc(var(--spacer) * 10); margin-top: calc(var(--spacer) * 5);}
 .project-logos img {height: 4rem; width: auto;}
+
+.news-image {max-width: 450px; height: auto;}
 
 .contact-container {display: grid; grid-template-columns: 1fr 3fr; gap: var(--spacer3); align-items: start;}
 .contact-institution {margin-bottom: var(--spacer2); display: flex; flex-direction: column; gap: var(--spacer3); align-items: flex-start;}
@@ -63,21 +82,9 @@ nav .logo img {height: 6rem; width: auto;}
 .contact-names > div:nth-child(2n+1) {background: var(--light);}
 .contact-names > div > span:nth-child(2n+1) {display: grid; grid-template-columns: 0.5fr 1fr; gap: var(--spacer3)}
 
-.m-0 {margin: 0;}
-.mb-0 {margin-bottom: 0;}
-.mb-1 {margin-bottom: calc(var(--spacer));}
-.mb-2 {margin-bottom: var(--spacer2);}
-.mb-3 {margin-bottom: calc(var(--spacer) * 3);}
-.mb-4 {margin-bottom: calc(var(--spacer) * 4);}
-.mt-0 {margin-top: 0;}
-.mt-1 {margin-top: calc(var(--spacer));}
-.mt-2 {margin-top: var(--spacer2);}
-.mt-3 {margin-top: calc(var(--spacer) * 3);}
-.mt-4 {margin-top: calc(var(--spacer) * 4);}
-.mt-5 {margin-top: calc(var(--spacer) * 5);}
-
 @media (max-width: 800px) {
     .contact-container {grid-template-columns: 1fr;}
     .contact-names > div > span:nth-child(2n+1) {display: flex; gap: var(--spacer); flex-direction: column;}
     .d-sm-none {display: none;}
+    .img-responsive {max-width: 100%;}
 }

@@ -1,2 +1,8 @@
 project:
 	name: "Pflanzen an der Grenze"
+
+social_media: "Soziale Medien"
+
+species:
+	examples: "Beispiele"
+	list: "Liste"

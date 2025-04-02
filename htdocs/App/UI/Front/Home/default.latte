@@ -1,35 +1,11 @@
 {block content}
 
-{* <h1>Úvod</h1> *}
+<h1>{_base.project.name}</h1>
+<h2>{_home.news}</h2>
 
-{* <h1>O projektu</h1> *}
-
-<h1>Projekt: {_about.subtitle}</h1>
-
-<img src="{$basePath}/images/interreg-{$locale}.png" style="height: 8rem">
-
-<pre>
-{_about.line}
-{_about.line2}
-{_about.line3}
-{_about.line4}
-{_about.line5}
-{_about.line6}
-</pre>
-
-<p>
-{_about.description}
-</p>
-
-<div class="project-logos">
-
-<img src="{$basePath}/images/flag_eu.svg">
-<img src="{$basePath}/images/jcu.jpg">
-<img src="{$basePath}/images/oo-landeskultur.png">
-
-</div>
-
-{* <h1>Kontakty</h1> *}
+<h3>{_home.introductory_meeting.title} (27. 1. 2025)</h3>
+<p>{_home.introductory_meeting.text}</p>
+<img class="news-image img-responsive" src="{$basePath}/images_news/introductory.jpg">
 
 {/block}
 

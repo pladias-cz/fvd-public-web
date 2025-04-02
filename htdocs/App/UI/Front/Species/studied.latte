@@ -1,0 +1,28 @@
+{block content}
+<h1>{_menu.studied}</h1>
+
+<h2>{_base.species.examples}</h2>
+
+<div id="links">
+{import 'gallery_images_temp.latte'}
+{include species, 'Caltha palustris', 'CalthaPalustris_4x_Kvet6Modrava22052004.jpg', 'M. Štech', 'Caltha-palustris_kvadranty.png', '', 'blatouch bahenní'}
+{include species, 'Pulmonaria officinalis', 'Pulmonaria-obscura_Horni-Svetle-Hory_Stech_2020-04-17_MS_IMG_2286.jpg', 'M. Štech', 'Pulmonaria-officinallis-agg_kvadranty.png', 'agg.', 'okruh plicníku lékařského'}
+</div>
+
+{include 'gallery_controls.latte'}
+
+<h2>{_base.species.list}</h2>
+<table class='{$hideCzechNames}'>
+    <tr><td><i>Aconitum</i></td><td>rod oměj</td></tr>
+    <tr><td><i>Caltha palustris</i></td><td>blatouch bahenní</td></tr>
+    <tr><td><i>Campanula patula</i></td><td>zvonek rozkladitý</td></tr>
+    <tr><td><i>Euphrasia nemorosa</i> agg.</td><td>okruh světlíku hajního</td></tr>
+    <tr><td><i>Galium mollugo</i> agg.</td><td>okruh svízele povázky</td></tr>
+    <tr><td><i>Hylotelephium maximum</i> agg.</td><td>okruh rozchodníku většího</td></tr>
+    <tr><td><i>Mimulus guttatus</i></td><td>kejklířka skvrnitá</td></tr>
+    <tr><td><i>Pulmonaria officinalis</i> agg.</td><td>okruh plicníku lékařského</td></tr>
+    <tr><td><i>Ranunculus</i> sect. Batrachium</td><td>rod lakušník</td></tr>
+    <tr><td><i>Vaccinium oxycoccos</i></td><td>klikva maloplodá</td></tr>
+</table>
+
+{/block}

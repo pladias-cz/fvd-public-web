@@ -1,0 +1,33 @@
+{block content}
+<h1>{_menu.invasive}</h1>
+
+<h2>{_base.species.examples}</h2>
+
+<div id="links">
+{import 'gallery_images_temp.latte'}
+{include species, 'Heracleum mantegazzianum', 'Heracleum-mantegazzianum_H_Strazny01_Ekrt_2006.jpg', 'L. Ekrt', 'Heracleum-mantegazzianum.png', '','bolševník velkolepý'}
+{include species, 'Lupinus polyphyllus', 'Lupinus-polyphyllus_Klapa_Stech_2020-06-24_IMG_5514.jpg', 'M. Štech', 'Lupinus-polyphyllus.png', '','lupina mnoholistá'}
+{include species, 'Telekia speciosa', 'Telekia-speciosa_Losenice_Stech_2022-06-30_IMG_9343.jpg', 'M. Štech', 'Telekia-speciosa.png', '','kolotočník ozdobný'}
+</div>
+
+{include 'gallery_controls.latte'}
+
+<h2>{_base.species.list}</h2>
+
+<table class='{$hideCzechNames}'>
+        <tr><td><i>Cytisus scoparius</i></td><td>janovec metlatý</td></tr>
+        <tr><td><i>Heracleum mantegazzianum</i></td><td>bolševník velkolepý</td></tr>
+        <tr><td><i>Impatiens glandulifera</i></td><td>netýkavka žláznatá</td></tr>
+        <tr><td><i>Impatiens parviflora</i></td><td>netýkavka malokvětá</td></tr>
+        <tr><td><i>Lupinus polyphyllus</i></td><td>lupina mnoholistá</td></tr>
+        <tr><td><i>Reynoutria</i> ×<i>bohemica</i></td><td>křídlatka česká</td></tr>
+        <tr><td><i>Reynoutria japonica</i></td><td>křídlatka japonská</td></tr>
+        <tr><td><i>Reynoutria sachalinensis</i></td><td>křídlatka sachalinská</td></tr>
+        <tr><td><i>Rudbeckia laciniata</i></td><td>třapatka dřípatá</td></tr>
+        <tr><td><i>Solidago canadensis</i></td><td>zlatobýl kanadský</td></tr>
+        <tr><td><i>Solidago gigantea</i></td><td>zlatobýl obrovský</td></tr>
+        <tr><td><i>Telekia speciosa</i></td><td>kolotočník ozdobný</td></tr>
+    </table>
+
+
+{/block}
