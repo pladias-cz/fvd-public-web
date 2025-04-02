@@ -8,17 +8,23 @@
 <div class="nav-links">
 <div>
 <a class="{if $presenter->isLinkCurrent('Home:')}active{/if}" n:href="Home:">{_menu.homepage}</a>
-{* <a class="{if $presenter->isLinkCurrent('Home:about')}active{/if}" n:href="Home:about">{_menu.about}</a> *}
-<a class="{if $presenter->isLinkCurrent('Home:contact')}active{/if}" n:href="Home:contact">{_menu.contact}</a>
+<a class="{if $presenter->isLinkCurrent('Home:about')}active{/if}" n:href="Home:about">{_menu.about}</a>
+<a class="{if $presenter->isLinkCurrent('Home:activities')}active{/if}" n:href="Home:activities">{_menu.activities}</a>
+<a class="{if $presenter->isLinkCurrent('Home:publicity')}active{/if}" n:href="Home:publicity">{_menu.publicity}</a>
 
-{* <div class="dropdown">
-    <a class="dropdown-parent" href="#">Test roll</a>
+<div class="dropdown">
+    <a class="dropdown-parent {if $presenter->isLinkCurrent('Species:*')}active{/if}" href="#">{_menu.species}</a>
     
     <div class="dropdown-content">
-    <a href="#">Test roll 2</a>
-    <a href="#">Test roll 3</a>
+    <a class="{if $presenter->isLinkCurrent('Species:studied')}active{/if}" n:href="Species:studied">{_menu.studied}</a>
+    <a class="{if $presenter->isLinkCurrent('Species:flagship')}active{/if}" n:href="Species:flagship">{_menu.flagship}</a>
+    <a class="{if $presenter->isLinkCurrent('Species:invasive')}active{/if}" n:href="Species:invasive">{_menu.invasive}</a>
     </div>
-</div> *}
+</div>
+
+<a class="{if $presenter->isLinkCurrent('Home:contact')}active{/if}" n:href="Home:contact">{_menu.contact}</a>
+
+
 
 </div>
 
