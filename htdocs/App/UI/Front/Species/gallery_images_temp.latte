@@ -1,0 +1,11 @@
+{define species, $name, $linkPhoto, $author, $linkMap, $uprightNamePart, $czechName}
+	<h3><span class="text-italic">{$name}</span>{if $uprightNamePart} {$uprightNamePart}{/if} {if $locale == "cs"} &ndash; {$czechName}{/if}</h3>
+    <div class="d-flex wrap gallery-clickable"><div class="labeled">
+    <a class="picture-link" href="{$basePath}/images_species/{$presenter->getAction()}/{$linkPhoto}"><img src="{$basePath}/images_species/{$presenter->getAction()}/{$linkPhoto}" /></a>
+    <p><span class="smallcaps">autor</span>: {$author}</p>
+    </div>
+    <div class="labeled">
+    <a class="picture-link" href="{$basePath}/images_species/{$presenter->getAction()}/{$linkMap}"><img src="{$basePath}/images_species/{$presenter->getAction()}/{$linkMap}" /></a>
+    </div>
+    </div>
+{/define}

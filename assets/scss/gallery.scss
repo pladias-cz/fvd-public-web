@@ -1,0 +1,8 @@
+.labeled {position: relative; height: 13rem;} .labeled img {height: 100%;}
+.labeled p {padding: .1rem .3rem; margin: auto; background: var(--primary); color: white; display: inline-block; position: absolute;
+bottom: 0;
+left: 0;
+text-align: left; max-width: 100%;}
+.smallcaps {
+    font-variant: small-caps;
+}

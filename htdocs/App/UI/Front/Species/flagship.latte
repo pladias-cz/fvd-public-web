@@ -1,7 +1,23 @@
 {block content}
 <h1>{_menu.flagship}</h1>
 
-<table>
+<h2>{_base.species.examples}</h2>
+
+<div id="links">
+{import 'gallery_images_temp.latte'}
+{include species, 'Antennaria dioica', 'AntennariaDivisov20021.jpg', 'M. Štech', 'Antennaria-dioica.png', '', 'kociánek dvoudomý'}
+{include species, 'Arnica montana', 'arnica_montana_kvilda_6_04_07_2004.jpg', 'M. Štech', 'Arnica-montana.png', '', 'prha arnika'}
+{include species, 'Dactylorhiza majalis', 'Dactylorhiza-majalis_Rejstejnske-Zhuri_Stech_2020-06-21_IMG_5240.jpg', 'M. Štech', 'Dactylorhiza-majalis.png', '', 'prstnatec májový'}
+{include species, 'Parnassia palustris', 'Parnassia-palustris_Cerveny-potok_Knizeci-Plane_2021-09-07_IMG_5465.jpg', 'M. Štech', 'Parnassia-palustris.png', '', 'tolije bahenní'}
+{include species, 'Pedicularis sylvatica', 'Pedicularis-sylvatica_Cerveny-potok_Stech_2020-06-16_IMG_4416.jpg', 'M. Štech', 'Pedicularis-sylvatica.png', '', 'všivec lesní'}
+{include species, 'Pinguicula vulgaris', 'Pinguicula-vulgaris_Sovi-vrch_Stech_2020-06-14_IMG_4000.jpg', 'M. Štech', 'Pinguicula-vulgaris.png', '', 'tučnice obecná'}
+</div>
+
+{include 'gallery_controls.latte'}
+
+<h2>{_base.species.list}</h2>
+
+<table class='{$hideCzechNames}'>
         <tr><td><i>Arnica montana</i></td><td>prha arnika</td></tr>
         <tr><td><i>Botrychium lunaria</i></td><td>vratička měsíční</td></tr>
         <tr><td><i>Botrychium matricariifolium</i></td><td>vratička heřmánkolistá</td></tr>

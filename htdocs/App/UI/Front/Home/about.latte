@@ -1,17 +1,18 @@
 {block content}
 
-<h1>{_menu.about}: {_about.subtitle}</h1>
+<h1>{_menu.about}</h1>
+<h2>{_about.subtitle}</h2>
 
-<img src="{$basePath}/images/interreg-{$locale}.png" style="height: 8rem">
+<img src="{$basePath}/images/interreg-{$locale}.png" style="max-height: 8rem" class="img-responsive" alt="Interreg">
 
-<pre>
-{_about.line}
-{_about.line2}
-{_about.line3}
-{_about.line4}
-{_about.line5}
+<p>
+{_about.line}<br>
+{_about.line2}<br>
+{_about.line3}<br>
+{_about.line4}<br>
+{_about.line5}<br>
 {_about.line6}
-</pre>
+</p>
 
 <p>
 {_about.description}

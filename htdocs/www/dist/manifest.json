@@ -1,5 +1,19 @@
 {
-  "app.css": "/dist/app.css",
-  "app.js": "/dist/app.js",
-  "images/dropdown-arrow.svg": "/dist/images/dropdown-arrow.b300d56d.svg"
+  "app.css": "/dist/app.24713b70.css",
+  "app.js": "/dist/app.f0f7d0ce.js",
+  "gallery.css": "/dist/gallery.6590b0ad.css",
+  "gallery.js": "/dist/gallery.6ef9b1b6.js",
+  "images/loading.gif": "/dist/images/loading.f028c722.gif",
+  "images/loading.svg": "/dist/images/loading.023c9ea9.svg",
+  "images/dropdown-arrow.svg": "/dist/images/dropdown-arrow.b300d56d.svg",
+  "images/error.png": "/dist/images/error.3bafc2f1.png",
+  "images/play-pause.svg": "/dist/images/play-pause.ec352601.svg",
+  "images/play-pause.png": "/dist/images/play-pause.208696f4.png",
+  "images/error.svg": "/dist/images/error.f75c8745.svg",
+  "images/close.svg": "/dist/images/close.a602bec8.svg",
+  "images/next.svg": "/dist/images/next.5b3eec6f.svg",
+  "images/prev.svg": "/dist/images/prev.8d15baa0.svg",
+  "images/prev.png": "/dist/images/prev.568f8dfe.png",
+  "images/next.png": "/dist/images/next.1289eefa.png",
+  "images/close.png": "/dist/images/close.2d9dfafe.png"
 }

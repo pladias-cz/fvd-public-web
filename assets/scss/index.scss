@@ -16,7 +16,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {width: max-content; max-width: 100%;}
-h1 {border-bottom: 4px solid var(--quarternary);}
+h1 {border-bottom: 4px solid var(--quarternary); margin-top: calc(var(--spacer) * 2);}
 h2 {border-bottom: 2px solid var(--quarternary);}
 
 body {
@@ -57,6 +57,12 @@ nav .logo img {height: 6rem; width: auto;}
 .nav-links > div a {color: white; text-decoration: none; font-size: 125%; border-bottom: 2px solid transparent; text-transform: uppercase; transition: 0.1s;}
 .nav-links > div a:hover, .nav-links > div a.active {border-bottom: 2px solid white;}
 
+@media (max-width: 800px) {
+    .nav-links {gap: calc(var(--spacer) * 2);}
+    nav > div {flex-wrap: wrap; align-items: flex-start;}
+    .nav-links > div {flex-wrap: wrap; row-gap: calc(var(--spacer) / 2);}
+}
+
 .dropdown-parent {display: flex; align-items: center;}
 .dropdown-parent:after {content: ''; display: inline-block; width: 25px; height: 25px; background: url("../ui-images/dropdown-arrow.svg") center center no-repeat;}
 .dropdown-content {display: none;}
@@ -80,4 +86,5 @@ nav .logo img {height: 6rem; width: auto;}
     .contact-container {grid-template-columns: 1fr;}
     .contact-names > div > span:nth-child(2n+1) {display: flex; gap: var(--spacer); flex-direction: column;}
     .d-sm-none {display: none;}
+    .img-responsive {max-width: 100%;}
 }

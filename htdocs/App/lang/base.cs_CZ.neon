@@ -35,3 +35,7 @@ seo:
     description: ""
     author: "Jihočeská univerzita"
 social_media: "Sociální sítě"
+
+species:
+	examples: "Příklady"
+	list: "Seznam"

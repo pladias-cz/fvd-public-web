@@ -11,7 +11,13 @@
 .mt-4 {margin-top: calc(var(--spacer) * 4);}
 .mt-5 {margin-top: calc(var(--spacer) * 5);}
 
+.d-flex {display: flex;}
+.d-none {display: none;}
+.wrap {flex-wrap: wrap;}
 .d-grid {display: grid}
 .grid-2 {grid-template-columns: repeat(2, 1fr);}
 
 .text-right {text-align: right;}
+.text-italic {font-style: italic;}
+
+table.hide-czech-name tr > td:nth-child(2) {display: none;}
