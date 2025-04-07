@@ -3,37 +3,36 @@
 <nav>
 <div class="container">
 
-<a class="logo" n:href="Home:"><img src="{$basePath}/images/project-logo-light.svg"></a>
+    <a n:href="Home:">
+        <img src="{$basePath}/images/project-logo-light.svg">
+        <span class="d-mobile"><img src="{$basePath}/images/favicon.svg"><span>{_base.project.name}</span></span>
+    </a>
 
-<div class="nav-links">
-<div>
-<a class="{if $presenter->isLinkCurrent('Home:')}active{/if}" n:href="Home:">{_menu.homepage}</a>
-<a class="{if $presenter->isLinkCurrent('Home:about')}active{/if}" n:href="Home:about">{_menu.about}</a>
-<a class="{if $presenter->isLinkCurrent('Home:activities')}active{/if}" n:href="Home:activities">{_menu.activities}</a>
-<a class="{if $presenter->isLinkCurrent('Home:publicity')}active{/if}" n:href="Home:publicity">{_menu.publicity}</a>
+    <div class="nav-links">
+    <a class="{if $presenter->isLinkCurrent('Home:')}active{/if}" n:href="Home:">{_menu.homepage}</a>
+    <a class="{if $presenter->isLinkCurrent('Home:about')}active{/if}" n:href="Home:about">{_menu.about}</a>
+    <a class="{if $presenter->isLinkCurrent('Home:activities')}active{/if}" n:href="Home:activities">{_menu.activities}</a>
+    <a class="{if $presenter->isLinkCurrent('Home:publicity')}active{/if}" n:href="Home:publicity">{_menu.publicity}</a>
 
-<div class="dropdown">
-    <a class="dropdown-parent {if $presenter->isLinkCurrent('Species:*')}active{/if}" href="#">{_menu.species}</a>
-    
-    <div class="dropdown-content">
-    <a class="{if $presenter->isLinkCurrent('Species:studied')}active{/if}" n:href="Species:studied">{_menu.studied}</a>
-    <a class="{if $presenter->isLinkCurrent('Species:flagship')}active{/if}" n:href="Species:flagship">{_menu.flagship}</a>
-    <a class="{if $presenter->isLinkCurrent('Species:invasive')}active{/if}" n:href="Species:invasive">{_menu.invasive}</a>
+    <div class="dropdown">
+        <a class="dropdown-parent {if $presenter->isLinkCurrent('Species:*')}active{/if}" href="#">{_menu.species}</a>
+        
+        <div class="dropdown-content">
+        <a class="{if $presenter->isLinkCurrent('Species:flagship')}active{/if}" n:href="Species:flagship">{_menu.flagship}</a>
+        <a class="{if $presenter->isLinkCurrent('Species:invasive')}active{/if}" n:href="Species:invasive">{_menu.invasive}</a>
+        <a class="{if $presenter->isLinkCurrent('Species:studied')}active{/if}" n:href="Species:studied">{_menu.studied}</a>
+        </div>
     </div>
-</div>
 
-<a class="{if $presenter->isLinkCurrent('Home:contact')}active{/if}" n:href="Home:contact">{_menu.contact}</a>
-
-
-
-</div>
+    <a class="{if $presenter->isLinkCurrent('Home:contact')}active{/if}" n:href="Home:contact">{_menu.contact}</a>
+    </div>
 
 
-<div>
-<a data-language="cs" class="{if $locale == 'cs'}active{/if}" href="{link this,locale=>cs}">cs</a>
-<a data-language="de" class="{if $locale == 'de'}active{/if}" href="{link this,locale=>de}">de</a>
-{* <a data-language="en" class="{if $locale == 'en'}active{/if}" href="{link this,locale=>en}">en</a> *}
-</div>
+    <div class="nav-links nowrap">
+    <a data-language="cs" class="{if $locale == 'cs'}active{/if}" href="{link this,locale=>cs}">cs</a>
+    <a data-language="de" class="{if $locale == 'de'}active{/if}" href="{link this,locale=>de}">de</a>
+    {* <a data-language="en" class="{if $locale == 'en'}active{/if}" href="{link this,locale=>en}">en</a> *}
+    </div>
 
 </div>
 
