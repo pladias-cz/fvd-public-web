@@ -14,13 +14,12 @@
     <a class="{if $presenter->isLinkCurrent('Home:activities')}active{/if}" n:href="Home:activities">{_menu.activities}</a>
     <a class="{if $presenter->isLinkCurrent('Home:publicity')}active{/if}" n:href="Home:publicity">{_menu.publicity}</a>
 
-    <div class="dropdown">
-        <a class="dropdown-parent {if $presenter->isLinkCurrent('Species:*')}active{/if}" href="#">{_menu.species}</a>
-        
-        <div class="dropdown-content">
-        <a class="{if $presenter->isLinkCurrent('Species:flagship')}active{/if}" n:href="Species:flagship">{_menu.flagship}</a>
-        <a class="{if $presenter->isLinkCurrent('Species:invasive')}active{/if}" n:href="Species:invasive">{_menu.invasive}</a>
-        <a class="{if $presenter->isLinkCurrent('Species:studied')}active{/if}" n:href="Species:studied">{_menu.studied}</a>
+    <div>
+        <a class="dropdown-parent {if $presenter->isLinkCurrent('Species:*')}active{/if}" href="#" style="anchor-name: --dropdown1">{_menu.species}</a>
+        <div class="dropdown-content" style="position-anchor: --dropdown1">
+            <a class="{if $presenter->isLinkCurrent('Species:flagship')}active{/if}" n:href="Species:flagship">{_menu.flagship}</a>
+            <a class="{if $presenter->isLinkCurrent('Species:invasive')}active{/if}" n:href="Species:invasive">{_menu.invasive}</a>
+            <a class="{if $presenter->isLinkCurrent('Species:studied')}active{/if}" n:href="Species:studied">{_menu.studied}</a>
         </div>
     </div>
 

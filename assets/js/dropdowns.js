@@ -6,7 +6,7 @@ export default function dropdowns() {
             e.preventDefault();
             e.stopPropagation();
             
-            const dropdownContent = this.closest('.dropdown').querySelector('.dropdown-content');
+            const dropdownContent = this.nextElementSibling;
             
             document.querySelectorAll('.dropdown-content.triggered').forEach(content => {
               if (content !== dropdownContent) {

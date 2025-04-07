@@ -57,7 +57,9 @@ nav {background: var(--primary); color: white; padding: calc(var(--spacer) * 3);
 .dropdown-parent {display: flex; align-items: center;}
 .dropdown-parent:after {content: ''; display: inline-block; width: 25px; height: 25px; background: url("../ui-images/dropdown-arrow.svg") center center no-repeat;}
 .dropdown-content {display: none;}
-.dropdown-content.triggered {display: flex; position: absolute; margin-top: 10px; flex-direction: column; padding: calc(var(--spacer) * 3); border-radius: var(--border-radius); background: var(--primary); row-gap: var(--spacer);}
+.dropdown-content.triggered {display: flex; flex-direction: column; padding: calc(var(--spacer) * 3); border-radius: var(--border-radius); background: var(--primary); row-gap: var(--spacer);
+    position: absolute;
+    left: anchor(left); top: anchor(bottom);}
 
 .project-logos {display: flex; flex-wrap: wrap; gap: calc(var(--spacer) * 10); margin-top: calc(var(--spacer) * 5);}
 .project-logos img {height: 4rem; width: auto;}
@@ -92,7 +94,7 @@ nav > div > div:nth-of-type(1) {
     .d-sm-none {display: none;}
     .img-responsive {max-width: 100%;}
     
-    nav > div {display: grid; grid-template-rows: repeat(auto-fit, minmax(0, 1fr)); grid-template-columns: 3fr 1fr; column-gap: calc(var(--spacer) * 4); row-gap: calc(var(--spacer) * 2); align-items: center; justify-content: stretch;
+    nav > div {display: grid; grid-template-rows: repeat(auto-fit, minmax(0, 1fr)); grid-template-columns: 4fr 1fr; column-gap: calc(var(--spacer) * 4); row-gap: calc(var(--spacer) * 2); align-items: center; justify-content: stretch;
         grid-template-areas: "logo language" "menulinks menulinks";
     }
 
