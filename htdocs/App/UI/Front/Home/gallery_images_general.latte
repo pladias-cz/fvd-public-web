@@ -1,6 +1,6 @@
 {define photo, $directory, $filename, $title, $author = null}
 	<div class="labeled">
     <a class="picture-link" href="{$directory}/{$filename}"><img src="{$directory}/previews/{$filename}" /></a>
-    <p>{$title}{if $author}, <span class="smallcaps">autor</span>: {$author|noescape}{/if}</p>
+    <p>{$title|noescape}{if $author}, <span class="smallcaps">autor</span>: {$author|noescape}{/if}</p>
     </div>
 {/define}
