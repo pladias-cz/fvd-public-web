@@ -15,6 +15,7 @@ abstract class BasePresenter extends Presenter
         self::LOCALE_EN => self::LOCALE_EN,
         self::LOCALE_DE => self::LOCALE_DE];
 
+    const string IMAGE_STORAGE = "https://files.ibot.cas.cz/florasilvaegabretae/fsg/";
 
     const DEFAULT_DATE_FORMAT = 'j_m_Y';
     const CS_DATE_FORMAT="j.n.Y";
@@ -22,7 +23,7 @@ abstract class BasePresenter extends Presenter
     const EN_DATE_FORMAT="j/n/Y";
 
     /** @persistent */
-    public $locale;
+    public string $locale = self::LOCALE_CS;
 
     /** @var Translator @inject */
     public $translator;

@@ -1,0 +1,55 @@
+map:
+  mapSettings: Einstellungen
+  mapInfo: Datenquelle
+  layers: Layer
+  basic: Standard
+  terrain: Topografische Karte
+  showGrid: Kartenraster anzeigen
+  beforeYear: Vor
+  revised: Verifizierte Angaben
+  unrevised: Noch nicht verifizierte Angaben
+  uncertain: Unsichere Angaben
+  timespan: Beobachtungszeitraum
+  to45: Bis 1945
+  45-90: 1945–1990
+  after90: Nach 1990
+  info_1: "Die Verbreitungsdaten der Pflanzen stammen aus der Datenbank der Tschechischen Flora und Vegetation ("
+  info_2: "), der Datenbank zur Flora von Bayern ("
+  info_3: ") und neu erfassten Daten aus dem Projekt Flora des Böhmerwaldes."
+  info_4: "Angaben zur Verbreitung werden basierend auf dem Kartenraster für Mitteleuropa angegeben, abgeleitet von Quadranten mit 5 × 3 Bogenminuten (ca. 5,5 × 5,9 km)."
+  maxAltitude: Höchster Standort
+  minAltitude: Niedrigster Standort
+  close: Schließen
+  legend:
+      notrevised: "Die Karte wurde noch nicht überarbeitet und zeigt alle Datensätze an, von denen manche möglicherweise nicht korrekt sind."
+      legend: Legende
+      time:
+          remark: "Nach Datum filtern"
+          switch: "Alle anzeigen"
+      semafor:
+          remark: "Alle anzeigen"
+          switch: "Nach Datum filtern"
+
+local_names: Deutsche Namen
+scientific_names: Akzeptierte wissenschftliche Namen
+redlist: "Rote Liste des Böhmerwaldes"
+redlist_cats:
+  cr: "Vom Aussterben bedroht"
+  en: "Stark gefährdet"
+  vu: "Verletzlich"
+  nt: "Potentiell gefährdet"
+  re: "Ausgestorben"
+redlist_cat: "Kategorie der Roten Liste"
+
+description:
+  maxAltitude: Höchster Standort
+  minAltitude: Niedrigster Standort
+  altitude: m ü. NHN
+
+images:
+	copyright_1: "Na veškeré fotografie uveřejněné na této webové stránce se vztahují autorská práva. Fotografie lze stáhnout a zdarma použít pro nekomerční využití (např. výuku) za podmínky, že bude uvedeno jméno autora a odkaz na webové stránky."
+	accept: "OK"
+
+factsheet:
+    link: "PDF"
+    distribution: "Verbereitung"

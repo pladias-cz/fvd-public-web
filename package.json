@@ -5,11 +5,19 @@
   "browserslist": [
     "> 5%"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://git.sorbus.ibot.cas.cz/pladias/flora-silvae-gabretae/public-web"
+  },
   "dependencies": {
+    "autocomplete.js": "^0",
     "@fortawesome/fontawesome-free": "^6",
-    "bootstrap": "^5.3.3",
-    "@popperjs/core": "^2.11.8",
-    "blueimp-gallery": "^3.4"
+    "bootstrap": "^5",
+    "jquery": "^3",
+    "jquery-ui": "^1",
+    "@popperjs/core": "^2",
+    "pladias-geoservices": "github:krkabol/pladias-geoservices#v0.3.0",
+    "blueimp-gallery": "^3"
   },
   "devDependencies": {
     "core-js": "^3",
@@ -19,7 +27,8 @@
     "postcss-preset-env": "^9",
     "sass-loader": "^16",
     "@symfony/webpack-encore": "^5",
-    "webpack-notifier": "^1"
+    "webpack-notifier": "^1",
+    "dotenv": "^16"
   },
   "scripts": {
     "dev": "encore dev",

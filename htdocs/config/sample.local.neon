@@ -1,0 +1,6 @@
+parameters:
+    slave:
+        host: pladias_master
+        user: bayernflora
+        password: bayernflora
+

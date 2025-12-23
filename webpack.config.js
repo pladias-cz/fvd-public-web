@@ -1,5 +1,9 @@
 const Encore = require('@symfony/webpack-encore');
 
+const webpack = require('webpack');
+const dotenv = require('dotenv');
+const env = dotenv.config().parsed;
+
 Encore
     .setOutputPath('htdocs/www/dist')
     .setPublicPath('/dist')
@@ -12,10 +16,13 @@ Encore
     .enableVersioning(Encore.isProduction())
     .enableSassLoader()
     .enablePostCssLoader()
-    .configureBabel(()=> {}, {
+    .configureBabel(() => {
+    }, {
         useBuiltIns: 'usage',
         corejs: 3
     })
-    .disableSingleRuntimeChunk();
-
+    .disableSingleRuntimeChunk()
+    .addPlugin(new webpack.DefinePlugin({ //https://webpack.js.org/plugins/define-plugin/
+        'process.env': JSON.stringify(env)
+    }));
 module.exports = Encore.getWebpackConfig();

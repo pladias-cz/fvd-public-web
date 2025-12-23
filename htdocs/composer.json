@@ -1,29 +1,31 @@
 {
 	"type": "project",
 	"license": ["MIT"],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/pladias-cz/doctrine-mappings"
+    }
+  ],
 	"require": {
-		"php": ">= 8.4",
+		"php": ">= 8.5",
     "ext-imagick": "*",
     "ext-intl": "*",
     "ext-exif": "*",
-		"nette/application": "^3.2.3",
-		"nette/bootstrap": "^3.2",
-		"nette/caching": "^3.2",
-		"nette/di": "^3.2",
-		"nette/http": "^3.3",
-		"nette/robot-loader": "^4.0",
-		"nette/utils": "^4.0",
-		"latte/latte": "^3.0",
-		"tracy/tracy": "^2.10",
-    "contributte/console": "^v0.9",
-    "contributte/console-extra": "^v0.7",
-    "contributte/translation": "^v2",
-    "contributte/console": "^v0",
+		"nette/application": "^3",
+		"nette/bootstrap": "^3",
+		"nette/caching": "^3",
+		"nette/di": "^3",
+		"nette/http": "^3",
+		"nette/robot-loader": "^4",
+		"nette/utils": "^4",
+		"latte/latte": "^3",
+		"tracy/tracy": "^2",
+    "contributte/console": "^0",
     "contributte/console-extra": "^v0",
-    "nettrine/orm": "^0.8",
-    "nettrine/dbal": "^v0.8.2",
-    "nettrine/cache": "^0.3",
-    "nettrine/migrations": "^v0.9",
+    "contributte/translation": "^2",
+    "pladias-cz/doctrine-mappings": "@dev",
+    "symfony/var-exporter": "^7",
     "68publishers/asset": "^3",
     "68publishers/webpack-encore-bundle": "^3"
   },
@@ -38,7 +40,7 @@
 	"minimum-stability": "stable",
 	"config": {
     "platform": {
-      "php": "8.4",
+      "php": "8.5",
       "ext-imagick": "3",
       "ext-intl": "3",
       "ext-exif": "3"

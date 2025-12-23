@@ -1,0 +1,29 @@
+extensions:
+    nettrine.dbal: Nettrine\DBAL\DI\DbalExtension(%debugMode%)
+    nettrine.orm: Nettrine\ORM\DI\OrmExtension
+
+nettrine.dbal:
+    debug:
+        panel: %debugMode%
+        sourcePaths: [%appDir%]
+    connections:
+        default:
+            driver: %slave.driver%
+            host: %slave.host%
+            user: %slave.user%
+            password: %slave.password%
+            dbname: %slave.dbname%
+            port: %slave.port%
+
+nettrine.orm:
+    managers:
+          default:
+              mapping:
+                  Pladias:
+                    directories:
+                     [%vendorDir%/pladias-cz/doctrine-mappings/src]
+                    namespace: Pladias\ORM
+              connection: default
+              autoGenerateProxyClasses: %debugMode%
+              proxyDir: %tempDir%/proxies
+

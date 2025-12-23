@@ -1,1 +1,21 @@
 parameters:
+
+    system:
+        error:
+            email: krkabol@gmail.com
+            presenter: Error
+
+    slave:
+        driver: pdo_pgsql
+        port: 5432
+        dbname: pladias
+        user: bayernflora
+        host: pladias_slave
+        metadata:
+            App: %appDir%
+
+    project:
+        rev: "1.0.0"
+
+    files:
+        root: %appDir%/../data/files
