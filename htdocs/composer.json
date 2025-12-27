@@ -18,6 +18,7 @@
 		"nette/di": "^3",
 		"nette/http": "^3",
 		"nette/robot-loader": "^4",
+    "nette/security": "^3",
 		"nette/utils": "^4",
 		"latte/latte": "^3",
 		"tracy/tracy": "^2",

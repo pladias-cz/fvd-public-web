@@ -1,4 +1,4 @@
-import {FSG} from 'pladias-geoservices/src/geo/known_polygons';
+import {FVD} from 'pladias-geoservices/src/geo/known_polygons';
 import {FloraSilvaeGabretae, layers as tiledLayers} from "pladias-geoservices/src/layers/tile_layers";
 import {layers as vectorLayers} from "pladias-geoservices/src/layers/vector_layers";
 import {PladiasMap} from 'pladias-geoservices/src/PladiasMap'
@@ -12,8 +12,8 @@ export default function createMap() {
         let taxon = mapElement.dataset.taxon;
         let baseLayers = tiledLayers.osm(true);
         let openTopo = tiledLayers.openTopo(false);
-        let vectorSquares = vectorLayers.squaresFsgVector(true);
-        let region = tiledLayers.regions(true);
+        let vectorSquares = vectorLayers.squaresFvdVector(true);
+        let region = tiledLayers.regionFvd(true);
 
         let timeBorderline = function () { return FloraSilvaeGabretae.timeBoundary(false, taxon, document.querySelector("#timeBorderlineSlider").value)};
         let timeLayer = timeBorderline();
@@ -23,7 +23,7 @@ export default function createMap() {
         let layers = [baseLayers, openTopo, vectorSquares, region, distributionAggregated, timeLayer];
 
         let viewOptions = {
-            center: FSG.centroidOL(),
+            center: FVD.centroidOL(),
             zoom: 8.88,
             maxZoom: 16,
             minZoom: 7
