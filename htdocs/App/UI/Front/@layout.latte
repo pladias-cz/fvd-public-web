@@ -23,18 +23,21 @@
         </div>
 
     </div>
-        <form class="d-flex" role="search">
-            <div class="input-group">
-                <input class="form-control autocomplete" id="searchInput" type="search"
-                       placeholder="{_main.taxon.insert}"
-                       autofocus data-source="{link Autocomplete:FSGTaxa}"
-                       data-target="{link Taxon:findInNames}"
-                       data-listen-enter="true"
-                       aria-label="Search">
-                <button class="btn btn-primary shadow-none" id="searchButton" type="submit">→</button>
-            </div>
-        </form>
+
     <a class="{if $presenter->isLinkCurrent('Home:contact')}active{/if}" n:href="Home:contact">{_menu.contact}</a>
+
+    <form class="d-flex" role="search">
+        <div class="input-group autocomplete-wrapper">
+            <input class="form-control autocomplete" id="searchInput" type="search"
+                    placeholder="{_menu.taxon_insert}"
+                    autofocus data-source="{link Autocomplete:FSGTaxa}"
+                    data-target="{link Taxon:findInNames}"
+                    data-listen-enter="true"
+                    aria-label="Search"
+                    autocomplete="off">
+            <button style="height: 38px" class="btn btn-primary shadow-none" id="searchButton" type="submit">→</button>
+        </div>
+    </form>
     </div>
 
 

@@ -3,6 +3,7 @@
 
 :root {
     --primary: #5b3d29;
+    --primary-rgb: 91, 61, 41;
     --secondary: #00963f;
     --tertiary: #b599e6;
     --quarternary: #fbca04;
@@ -30,6 +31,137 @@ pre {font-family: var(--font);}
 a {text-decoration: none; color: var(--secondary);}
 a:hover {text-decoration: none; color: hsl(from var(--secondary) h s 35%);}
 
+/* Button styling */
+button, .btn {
+    font-family: var(--font);
+    background: var(--light);
+    color: black;
+    border: 1px solid hsl(from var(--primary) h s 70%);
+    padding: calc(var(--spacer) * 1) calc(var(--spacer) * 2);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+button:hover, .btn:hover {
+    background: hsl(from var(--light) h s 70%);
+    border-color: hsl(from var(--primary) h s 40%);
+}
+
+button:active, .btn:active {
+    background: hsl(from var(--primary) h s 25%);
+}
+
+/* Input styling */
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+    font-family: var(--font);
+    font-size: 1rem;
+    padding: calc(var(--spacer) * 2);
+    border: 1px solid hsl(from var(--primary) h s 50%);
+    border-radius: var(--border-radius);
+    background: white;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: hsl(from var(--primary) h s 40%);
+}
+
+/* Custom checkbox styling */
+input[type="checkbox"] {
+    margin: 0;
+    margin-right: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid hsl(from var(--primary) h s 35%);
+    background: white;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    transition: all 0.2s;
+}
+
+input[type="checkbox"]:hover {
+    border-color: var(--primary);
+}
+
+input[type="checkbox"]:checked {
+    background: var(--primary);
+    border-color: hsl(from var(--primary) h s 20%);
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Custom radio button styling */
+input[type="radio"] {
+    margin: 0;
+    margin-right: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid hsl(from var(--primary) h s 35%);
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    transition: all 0.2s;
+}
+
+input[type="radio"]:hover {
+    border-color: var(--primary);
+}
+
+input[type="radio"]:checked {
+    border-color: var(--primary);
+}
+
+input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+/* Label spacing for form controls */
+label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-control-label {
+    vertical-align: middle;
+}
+
 p:has(+ ul) {margin-bottom: calc(var(--spacer) / 2);}
 p + ul {margin-top: 0;}
 
@@ -49,7 +181,7 @@ footer {background: var(--light);}
 
 nav {background: var(--primary); color: white; padding: calc(var(--spacer) * 3); }
 
-.nav-links {display: flex; row-gap: calc(var(--spacer)); column-gap: calc(var(--spacer) * 4); flex-wrap: wrap;}
+.nav-links {display: flex; row-gap: calc(var(--spacer)); column-gap: calc(var(--spacer) * 4); flex-wrap: wrap; align-items: center;}
 .nav-links a, nav > div > a, nav > div > a:hover {color: white; text-decoration: none; font-size: 125%; text-transform: uppercase;}
 .nav-links a, nav > div > a > span > span {border-bottom: 2px solid transparent; transition: 0.1s;}
 .nav-links a:hover, .nav-links a.active, nav > div > a:hover > span > span {border-bottom: 2px solid white;}
@@ -59,7 +191,7 @@ nav {background: var(--primary); color: white; padding: calc(var(--spacer) * 3);
 .dropdown-content {display: none;}
 .dropdown-content.triggered {display: flex; flex-direction: column; padding: calc(var(--spacer) * 3); border-radius: var(--border-radius); background: var(--primary); row-gap: var(--spacer);
     position: absolute;
-    left: anchor(left); top: anchor(bottom);}
+    left: anchor(left); top: anchor(bottom); z-index: 10;}
 
 .project-logos {display: flex; flex-wrap: wrap; gap: calc(var(--spacer) * 10); margin-top: calc(var(--spacer) * 5);}
 .project-logos img {height: 4rem; width: auto;}
@@ -107,6 +239,5 @@ nav > div > div:nth-of-type(1) {
 @media (min-width: 800px) {
     nav > div > a > img {display: block; height: 6rem; width: auto;}
     nav > div > a > span {display: none;}
-
     nav > div {display: grid; grid-template-rows: 1fr; grid-template-columns: min-content auto min-content; align-items: center; justify-content: stretch; grid-template-areas: "logo menulinks language"; column-gap: calc(var(--spacer) * 4);}
 }
