@@ -15,7 +15,7 @@
     "bootstrap": "^5",
     "jquery": "^3",
     "@popperjs/core": "^2",
-    "pladias-geoservices": "github:krkabol/pladias-geoservices#v0.4.1",
+    "pladias-geoservices": "github:krkabol/pladias-geoservices#v0.4.2",
     "blueimp-gallery": "^3"
   },
   "devDependencies": {

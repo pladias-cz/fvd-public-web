@@ -1,5 +1,5 @@
 import {FVD} from 'pladias-geoservices/src/geo/known_polygons';
-import {FloraSilvaeGabretae, layers as tiledLayers} from "pladias-geoservices/src/layers/tile_layers";
+import {FVD as FVDLayers, layers as tiledLayers} from "pladias-geoservices/src/layers/tile_layers";
 import {layers as vectorLayers} from "pladias-geoservices/src/layers/vector_layers";
 import {PladiasMap} from 'pladias-geoservices/src/PladiasMap'
 import controls from "pladias-geoservices/src/controls";
@@ -15,11 +15,11 @@ export default function createMap() {
         let vectorSquares = vectorLayers.squaresFvdVector(true);
         let region = tiledLayers.regionFvd(true);
 
-        let timeBorderline = function () { return FloraSilvaeGabretae.timeBoundary(false, taxon, document.querySelector("#timeBorderlineSlider").value)};
+        let timeBorderline = function () { return FVDLayers.timeBoundary(false, taxon, document.querySelector("#timeBorderlineSlider").value)};
         let timeLayer = timeBorderline();
         // let layers = [baseLayers, vectorSquares, region, timeLayer];
 
-        let distributionAggregated =  FloraSilvaeGabretae.distributionAggregated(true,taxon);
+        let distributionAggregated =  FVDLayers.distributionAggregated(true,taxon);
         let layers = [baseLayers, openTopo, vectorSquares, region, distributionAggregated, timeLayer];
 
         let viewOptions = {
