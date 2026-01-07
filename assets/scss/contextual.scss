@@ -11,24 +11,29 @@
 .mt-4 {margin-top: calc(var(--spacer) * 4);}
 .mt-5 {margin-top: calc(var(--spacer) * 5);}
 
+.px-3 {padding-inline: calc(var(--spacer) * 3) ;}
+
+.gap-3 {gap: calc(var(--spacer) * 3)}
+
 .d-flex {display: flex;}
 .d-grid {display: grid;}
-.grid-70-30 {grid-template-columns: 7fr 3fr;}
+.grid-80-20 {grid-template-columns: 8fr 2fr;}
+.grid-2 {grid-template-columns: repeat(2, 1fr);}
 
 @media (max-width: 600px) {
-    .grid-70-30 {grid-template-columns: 1fr;}
+    .grid-80-20 {grid-template-columns: 1fr;}
 }
 
 .d-none {display: none;}
 .wrap {flex-wrap: wrap;}
 .nowrap {flex-wrap: nowrap;}
-.d-grid {display: grid}
-.grid-2 {grid-template-columns: repeat(2, 1fr);}
 
 .w-max-content {width: max-content; max-width: 100%;}
 
 .text-right {text-align: right;}
 .text-italic {font-style: italic;}
+
+.bg-light {background: var(--light);}
 
 table.hide-czech-name tr > td:nth-child(2) {display: none;}
 

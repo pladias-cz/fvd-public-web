@@ -171,6 +171,13 @@ table {border-collapse: collapse;}
 table td {padding: calc(var(--spacer));}
 table tr:nth-child(2n) {background: var(--light)}
 
+// mapa
+.circleMap {border-radius: 0.2rem; width: 1rem; height: 1rem; display: inline-block; margin-bottom: -0.2rem; margin-right: 0.2rem}
+.green {background: green}
+.magentaGrid {background: white url("../ui-images/purplecrosses.svg") center; background-size: 0.45rem}
+.grey {background: grey}
+.orangeSemafor {background: orange}
+
 .emoji {font-family: "Noto Emoji"; font-optical-sizing: auto;}
 .text-bold {font-weight: bold;}
 
