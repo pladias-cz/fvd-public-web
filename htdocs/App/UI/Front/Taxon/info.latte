@@ -19,8 +19,8 @@
     </div>
     <div style="width: auto; max-width: 13rem;" class='px-3'>
         {* nastavení *}
-        <h3 class="mt-2">{_taxon.map.mapSettings}</h3>
-        <h4 class='mb-1'>{_taxon.map.layers}</h4>
+        <h3 class="mt-2 mb-1">{_taxon.map.mapSettings}</h3>
+        <h4 class='mt-2 mb-1'>{_taxon.map.layers}</h4>
         <div class="custom-control custom-radio">
             <input type="radio" id="baseLayerOSM" name="mapType" class="custom-control-input" checked>
             <label class="custom-control-label" for="baseLayerOSM">{_taxon.map.basic}</label>
@@ -48,7 +48,7 @@
             <div class="mt-2"><button type="button" class="btn btn-primary py-1 mt-3">{_taxon.map.legend.semafor.switch}</button></div>
         </div>
         {* <button type="button" name="button" class="btn btn-primary mt-2 py-1" id="mapInfo">{_taxon.map.mapInfo}</button> *}
-        <p class="mt-3 mb-0">
+        <p class="mt-3 mb-0" style='line-height: 1.5'>
             <span data-toggle="tooltip" class="help" title="{_taxon.map.legend.notrevised}">{_taxon.map.legend.legend}</span>:<br>
             <i class="circleMap green"></i> {_taxon.map.revised}<br>
             <i class="circleMap grey"></i> {_taxon.map.unrevised}<br>
