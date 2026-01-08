@@ -1,4 +1,4 @@
-FROM ghcr.io/biodiversity-cz/php-fpm-noroot-socket:main@sha256:d8daed20770bd77583a27b29a135a7ee409129fea6d7b161d1511bc98f67b77f
+FROM ghcr.io/biodiversity-cz/php-fpm-noroot-socket:main@sha256:8d605df26d8c884e8e767f9bef16ea2fbb8795f6e83a02a1e4aa2c7f978241a3
 LABEL org.opencontainers.image.source=https://github.com/pladias-cz/fvd-public-web
 LABEL org.opencontainers.image.description="FloraVltavaDonau"
 ARG GIT_TAG
