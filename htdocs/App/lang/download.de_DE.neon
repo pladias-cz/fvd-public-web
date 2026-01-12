@@ -1,0 +1,24 @@
+excel:
+    title: "Data"
+    creator: "https://www.florasilvaegabretae.eu/"
+    contributors: "FSG team"
+    convertor_pladias:
+        filename: "taxaConvertor_Pladias"
+        head:
+            id_original: "ID Pladias"
+            name_original: "name Pladias"
+            id_fsg: "ID FSG"
+            name_fsg: "name FSG"
+    convertor_dwb:
+        filename: "taxaConvertor_DWB"
+        head:
+            id_original: "ID DWB"
+            name_original: "name DWB"
+            id_fsg: "ID FSG"
+            name_fsg: "name FSG"
+    distribution:
+        filename: "FSGtaxa_distribution"
+        head:
+            taxon: "FSG taxon"
+            quadrant: "kvadrant"
+            present: "status"
