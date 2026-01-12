@@ -25,6 +25,7 @@
     "contributte/console": "^0",
     "contributte/console-extra": "^v0",
     "contributte/translation": "^2",
+    "phpoffice/phpspreadsheet": "^5",
     "pladias-cz/doctrine-mappings": "@dev",
     "symfony/var-exporter": "^7",
     "68publishers/asset": "^3",
@@ -44,7 +45,8 @@
       "php": "8.5",
       "ext-imagick": "3",
       "ext-intl": "3",
-      "ext-exif": "3"
+      "ext-exif": "3",
+      "ext-gd": "7"
     },
 		"allow-plugins": {
 			"symfony/thanks": true

@@ -164,17 +164,17 @@ class FSGTaxonsService extends BaseService
         return $result->fetchAllNumeric();
     }
 
-    public function getQadrantOccupation(FSGTaxons $taxon)
+    public function getQuadrantOccupation(FSGTaxons $taxon)
     {
         $sql = "SELECT  :name, s.code , (SELECT ss.description
-                         from bayernflora.geoserver_distribution_aggregated v
+                         from bayernflora.fvd_geoserver_distribution_aggregated v
                          JOIN atlas.record_validation_status ss ON (ss.id =  v.max_valid_status)
                          WHERE v.fsg_taxon=:fsg
                            AND v.code = s.code
                          ORDER BY v.layer_of_aggregation DESC LIMIT 1)
                 FROM geodata.quadrants_full  s
                 JOIN geodata.regions reg ON st_intersects(s.geom_wgs, reg.geom)
-                WHERE reg.id = 1
+                WHERE reg.id = 4
                 ORDER BY s.code";
         $query = $this->entityManager->getConnection()->prepare($sql);
         $query->bindValue('fsg', $taxon->id);
