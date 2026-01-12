@@ -21,7 +21,7 @@ class DownloadPresenter extends BasePresenter
 
     public function actionDistribution(int $id)
     {
-        $this->taxon = $this->fsgTaxonService->find($id);
+        $this->taxon = $this->FSGTaxonsService->find($id);
         $spreadsheet = $this->excelService->prepareExcel(
             $this->translator->translate('download.excel.distribution.filename')
         );
