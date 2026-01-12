@@ -7,6 +7,7 @@ use App\Services\FSGTaxonsService;
 use App\UI\Base\BasePresenter;
 use App\UI\Responses\ExcelResponse;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Pladias\ORM\Entity\Bayernflora\FSGTaxons;
 
 class DownloadPresenter extends BasePresenter
 {
@@ -16,9 +17,11 @@ class DownloadPresenter extends BasePresenter
     /**  @inject */
     public FSGTaxonsService $FSGTaxonsService;
 
+    protected FSGTaxons $taxon;
+
     public function actionDistribution(int $id)
     {
-        $this->findTaxon($id);
+        $this->taxon = $this->fsgTaxonService->find($id);
         $spreadsheet = $this->excelService->prepareExcel(
             $this->translator->translate('download.excel.distribution.filename')
         );
