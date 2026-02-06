@@ -17,7 +17,7 @@ class FSGTaxonsService extends BaseService
 
     public function findAll()
     {
-        return parent::findBy(["autocomplete" => TRUE]);
+        return parent::findBy(["isFvd" => TRUE]);
     }
 
     public function lookupAutocomplete($search)
@@ -29,7 +29,7 @@ class FSGTaxonsService extends BaseService
                 (SELECT name_lat as value, id
                 FROM bayernflora.taxons_fsg
  			    WHERE
- 			          autocomplete = true AND
+ 			          is_fvd = true AND
  			    (lower(unaccent(name_lat)) LIKE lower(unaccent(:name))
  			    OR
  			    lower(unaccent(replace(name_lat,'×','x'))) LIKE (unaccent(:name))))
@@ -37,7 +37,7 @@ class FSGTaxonsService extends BaseService
                 (SELECT name_cz as value, id
                 FROM bayernflora.taxons_fsg
  			    WHERE
- 			        autocomplete = true AND
+ 			        is_fvd = true AND
  			    (lower(unaccent(name_cz)) LIKE lower(unaccent(:name))
  			    OR
  			    lower(unaccent(replace(name_cz,'×','x'))) LIKE (unaccent(:name))))
@@ -45,7 +45,7 @@ class FSGTaxonsService extends BaseService
                 (SELECT name_de as value, id
                 FROM bayernflora.taxons_fsg
  			    WHERE
-                      autocomplete = true AND
+                      is_fvd = true AND
  			    (lower(unaccent(name_de)) LIKE lower(unaccent(:name))
  			    OR
  			    lower(unaccent(replace(name_de,'×','x'))) LIKE (unaccent(:name))))
@@ -64,7 +64,7 @@ class FSGTaxonsService extends BaseService
         $sql = "SELECT id
                 FROM bayernflora.taxons_fsg
  			    WHERE
-                  autocomplete = true AND
+                  is_fvd = true AND
  			    (lower(unaccent(name_lat)) = lower(unaccent(:name))
  			    OR
  			    lower(unaccent(name_cz)) = lower(unaccent(:name))
@@ -196,7 +196,7 @@ class FSGTaxonsService extends BaseService
 
     public function getTaxaLatinSorted()
     {
-        $taxa = $this->findBy(["autocomplete" => TRUE], []);
+        $taxa = $this->findBy(["isFvd" => TRUE], []);
         $coll = new \Collator('en_US');
         $coll->sort($taxa, \Collator::SORT_REGULAR);
         //        usort($taxa, function($a, $b) { return (substr($a->nameLat, 0, 1) < substr($b->nameLat, 0, 1)) ? -1 : 1;});
