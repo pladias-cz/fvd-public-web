@@ -14,8 +14,11 @@
 .px-3 {padding-inline: calc(var(--spacer) * 3) ;}
 
 .gap-3 {gap: calc(var(--spacer) * 3)}
+.gap-4 {gap: calc(var(--spacer) * 4)}
+.gap-15 {gap: calc(var(--spacer) * 15)}
 
 .d-flex {display: flex;}
+.flex-vertical {display: flex; flex-direction: column;}
 .d-grid {display: grid;}
 .grid-80-20 {grid-template-columns: 8fr 2fr;}
 .grid-2 {grid-template-columns: repeat(2, 1fr);}

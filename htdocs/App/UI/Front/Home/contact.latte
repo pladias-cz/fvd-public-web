@@ -1,6 +1,7 @@
 {block content}
 <h1>{_menu.contact}</h1>
 
+<div class="flex-vertical gap-15 mt-4">
 <div class="contact-container">
     <div class="contact-institution">
         <p class="m-0"><strong>{_contacts.institutions.department}<br>
@@ -72,6 +73,15 @@ Branišovská 1760<br>
 
     <div>
         <span>
+            <span>Vladimíra Květounová</span>
+            <span><a href="mailto:kvetounova@volny.cz"><span class="emoji">✉️</span><span class="d-sm-none">
+                        kvetounova@volny.cz</span></a></span>
+        </span>
+        <span>{_contacts.kvetounova_description}</span>
+    </div>   
+
+    <div>
+        <span>
             <span>Martin Lepší</span>
             <span><a href="mailto:Lepsi@seznam.cz"><span class="emoji">✉️</span><span class="d-sm-none">
                         Lepsi@seznam.cz</span></a></span>
@@ -110,7 +120,7 @@ Branišovská 1760<br>
 </div>
 </div>
 
-<div class="contact-container mt-5">
+<div class="contact-container">
     <div class="contact-institution">
         <p class="m-0"><strong>{_contacts.institutions.nationalParkSumava}</strong><br>
 1. máje 260<br>
@@ -145,7 +155,7 @@ Vimperk<br>
 </div>
 
 
-<div class="contact-container mt-5">
+<div class="contact-container">
     <div class="contact-institution">
         <p class="m-0"><strong>{_contacts.institutions.natureConservationAgency}</strong><br>
 {_contacts.institutions.natureConservationAgency2}<br>
@@ -177,7 +187,7 @@ nám. Přemysla Otakara II 34<br>
 </div>
 </div>
 
-<div class="contact-container mt-5">
+<div class="contact-container">
     <div class="contact-institution">
         <p class="m-0"><strong>Botanický ústav AV ČR, v. v. i.</strong><br>
 Zámek 1<br>
@@ -202,7 +212,7 @@ Zámek 1<br>
 
        
 
-<div class="contact-container mt-5">
+<div class="contact-container">
     <div class="contact-institution">
         <p class="m-0"><strong>{_contacts.institutions.ooLandesCulture}</strong><br>
 Museumstraße 14<br>
@@ -222,32 +232,33 @@ Museumstraße 14<br>
     </div>
 
     <div>
-        <span>
-            <span>Michael Malicky</span>
-            <span><a href="mailto:Michael.Malicky@ooelkg.at">✉️<span class="d-sm-none"> Michael.Malicky@ooelkg.at</span></a></span>
+        <span>  
+            <span>Christian Gilli</span>
+            <span><a href="mailto:Christian.Gilli@ooelkg.at">✉️<span class="d-sm-none">Christian.Gilli@ooelkg.at</span></a></span>
         </span>
-        <span>{_contacts.malicky_description}</span>
+        <span>{_contacts.gilli_description}</span>
     </div>
 
     <div>
         <span>
             <span>Gerhard Kleesadl</span>
-            <span><a href="mailto:Gerhard.Kleesadl@ooelkg.at">✉️<span class="d-sm-none"> Gerhard.Kleesadl@ooelkg.at</span></a></span>
+            <span><a href="mailto:Gerhard.Kleesadl@ooelkg.at">✉️<span class="d-sm-none">Gerhard.Kleesadl@ooelkg.at</span></a></span>
         </span>
         <span>{_contacts.kleesadl_description}</span>
     </div>
 
     <div>
         <span>
-            <span>Tobias Nigl</span>
-            <span><a href="mailto:Tobias.Nigl@ooelkg.at	">✉️<span class="d-sm-none"> Tobias.Nigl@ooelkg.at	</span></a></span>
+            <span>Michael Malicky</span>
+            <span><a href="mailto:Michael.Malicky@ooelkg.at">✉️<span class="d-sm-none">Michael.Malicky@ooelkg.at</span></a></span>
         </span>
-        <span>{_contacts.nigl_description}</span>
+        <span>{_contacts.malicky_description}</span>
     </div>
+    
     <div>
         <span>
             <span>Hans-Peter Reinthaler</span>
-            <span><a href="mailto:Hans-Peter.Reinthaler@ooelkg.at">✉️<span class="d-sm-none"> Hans-Peter.Reinthaler@ooelkg.at</span></a></span>
+            <span><a href="mailto:Hans-Peter.Reinthaler@ooelkg.at">✉️<span class="d-sm-none">Hans-Peter.Reinthaler@ooelkg.at</span></a></span>
         </span>
         <span>{_contacts.reinthaler_description}</span>
     </div>
@@ -255,7 +266,7 @@ Museumstraße 14<br>
     </div>
 </div>
 
-<div class="contact-container mt-5">
+<div class="contact-container">
     <div class="contact-institution">
         <p class="m-0"><strong>{_contacts.institutions.universityVienna}</strong><br>
 Universitätsring 1<br>
@@ -278,6 +289,8 @@ Universitätsring 1<br>
 
     <span class="grid-span-2">{_contacts.collaborating_botanists}: Christian Schröck (<a href="mailto:Christian.Schroeck@ooelkg.at">Christian.Schroeck@ooelkg.at</a>)</div>
 </div>
+</div>
+
 </div>
 
 {/block}
