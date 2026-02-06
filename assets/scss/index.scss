@@ -1,13 +1,6 @@
 // @import "@fortawesome/fontawesome-free/css/all.css";
 // @import "bootstrap/dist/css/bootstrap.min.css";
 
-/* CSS Reset - Prevent margin collapse */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 :root {
     --primary: #5b3d29;
     --primary-rgb: 91, 61, 41;
