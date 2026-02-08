@@ -22,3 +22,5 @@ excel:
             taxon: "FSG taxon"
             quadrant: "kvadrant"
             present: "status"
+    convertor_gbif:
+        filename: "taxaConvertor_GBIF"

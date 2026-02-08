@@ -43,6 +43,27 @@ class DownloadPresenter extends BasePresenter
         $this->sendSpreadsheet($spreadsheet, $filename);
     }
 
+    public function actionGbifMapping()
+    {
+        $spreadsheet = $this->excelService->prepareExcel(
+            $this->translator->translate('download.excel.convertor_gbif.filename')
+        );
+
+        $spreadsheet->getActiveSheet()->setTitle($this->translator->translate('download.excel.title'));
+        $header = ['convertor:id', 'gbif:taxon_key', 'gbif:scientific_name', 'gbif:accepted_taxon_key', 'gbif:accepted_scientific_name', 'gbif:taxon_rank','gbif:species', 'gbif:species_key', 'pladias:id', 'pladias:scientific_name'
+        ];
+        $data = $this->FSGTaxonsService->getGbifConvertor();
+        $spreadsheet = $this->excelService->easyFillExcel($spreadsheet, $header, $data);
+
+        $spreadsheet = $this->excelService->setItalic($spreadsheet, 'A2:A10000');
+        $spreadsheet = $this->excelService->setAutosize($spreadsheet, ['A', 'B', 'C']);
+
+        $filename = $this->translator->translate('download.excel.convertor_gbif.filename')
+            . "-" . $this->getFilenameSuffix();
+
+        $this->sendSpreadsheet($spreadsheet, $filename);
+    }
+
     private function getFilenameSuffix(string $quadFullName = ""): string
     {
         return $quadFullName . date(BasePresenter::DEFAULT_DATE_FORMAT, time());

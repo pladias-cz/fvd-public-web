@@ -202,4 +202,12 @@ class FSGTaxonsService extends BaseService
         //        usort($taxa, function($a, $b) { return (substr($a->nameLat, 0, 1) < substr($b->nameLat, 0, 1)) ? -1 : 1;});
         return $taxa;
     }
+
+    public function getGbifConvertor():array
+    {
+        $sql = "select g.*, p.name_lat FROM gbif.taxa g JOIN public.taxons p on (p.id=g.pladias_taxon_id)";
+        $query = $this->entityManager->getConnection()->prepare($sql);
+        $result = $query->executeQuery();
+        return $result->fetchAllNumeric();
+    }
 }
