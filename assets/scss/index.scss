@@ -228,6 +228,15 @@ nav > div > div:nth-of-type(1) {
     justify-self: end;
   }
 
+// pozvánky
+
+.invitation-500 {max-width: 500px;}
+.invitation-350 {max-width: 350px;}
+
+@media (max-width: 500px) {
+    .invitation-500, .invitation-350 {max-width: 100%;}
+}
+
 @media (max-width: 800px) {
     .contact-container {grid-template-columns: 1fr;}
     .contact-names > div > span:nth-child(2n+1) {display: flex; gap: var(--spacer); flex-direction: column;}
