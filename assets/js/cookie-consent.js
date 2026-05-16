@@ -57,6 +57,16 @@ export default function cookieConsent() {
         hideOverlay();
     };
 
+    const acceptConsent = () => {
+        setAcceptedFlag(1);
+        setFlag(KEY_OVERLAY_SHOWN, 1);
+        if (typeof window.loadAnalytics === 'function') {
+            window.loadAnalytics();
+        }
+        updateStatus();
+        hideOverlay();
+    };
+
     if (getFlag(KEY_OVERLAY_SHOWN) === 0) {
         showOverlay();
     }
@@ -73,21 +83,22 @@ export default function cookieConsent() {
     }
 
     document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && !overlay.classList.contains('d-none')) {
+        if (overlay.classList.contains('d-none')) {
+            return;
+        }
+
+        if (event.key === 'Escape') {
             declineConsent();
+            return;
+        }
+
+        if (event.key === 'Enter') {
+            acceptConsent();
         }
     });
 
     if (acceptButton) {
-        acceptButton.addEventListener('click', () => {
-            setAcceptedFlag(1);
-            setFlag(KEY_OVERLAY_SHOWN, 1);
-            if (typeof window.loadAnalytics === 'function') {
-                window.loadAnalytics();
-            }
-            updateStatus();
-            hideOverlay();
-        });
+        acceptButton.addEventListener('click', acceptConsent);
     }
 
     updateStatus();
