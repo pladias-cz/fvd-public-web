@@ -2,10 +2,10 @@
   "entrypoints": {
     "app": {
       "css": [
-        "/dist/app.e075c5b7.css"
+        "/dist/app.d13bc591.css"
       ],
       "js": [
-        "/dist/app.56c47da8.js"
+        "/dist/app.588599ef.js"
       ]
     },
     "gallery": {

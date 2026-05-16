@@ -13,9 +13,11 @@ value:
 	no: "ANO"
 	true: "PRAVDA"
 	yes: "NE"
+	allowed: "povoleno"
+	declined: "zakázáno"
 
 action:
-	accept: "V pořádku"
+	accept: "Souhlasím"
 	close: "zavřít"
 	open: "otevřít"
 	save: "uložit"
@@ -29,12 +31,17 @@ action:
 	error: "Chyba: "
 	next: "Předchozí"
 	previous: "Další"
+	decline: "Nesouhlasím"
 
 seo:
     keywords: "cévnaté rostliny, rostliny, flóra, květena, databáze, botanika"
     description: ""
     author: "Jihočeská univerzita"
 social_media: "Sociální sítě"
+
+cookies_message: "Tento web může využívat analytické cookies (Google Analytics) za účelem posuzování návštěvnosti. Souhlasíte s jejich použitím?"
+cookies_message2: "Nastavení můžete pak kdykoliv změnit."
+cookies_setting: "Nastavení cookies"
 
 species:
 	examples: "Příklady"
