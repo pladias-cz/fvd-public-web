@@ -12,6 +12,6 @@ docker run --rm --interactive --tty \
         --user=$(id -u):$(id -g) \
         -w="/data" \
         --entrypoint "npm" \
-        node $COMMAND
+        node:20 $COMMAND
 
 # ./npm.sh rebuild node-sass
