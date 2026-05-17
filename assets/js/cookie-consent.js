@@ -19,6 +19,7 @@ function setAcceptedFlag(value) {
 
 export default function cookieConsent() {
     const overlay = document.querySelector('[data-data="cookie-consent"]');
+    const body = document.body;
 
     if (!overlay) {
         return;
@@ -44,6 +45,9 @@ export default function cookieConsent() {
 
     const showOverlay = () => {
         overlay.classList.remove('d-none');
+        if (declineButton) {
+            declineButton.focus();
+        }
     };
 
     const hideOverlay = () => {
@@ -88,12 +92,8 @@ export default function cookieConsent() {
         }
 
         if (event.key === 'Escape') {
-            declineConsent();
+            hideOverlay();
             return;
-        }
-
-        if (event.key === 'Enter') {
-            acceptConsent();
         }
     });
 
