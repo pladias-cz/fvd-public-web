@@ -11,6 +11,7 @@ value:
 	allowed: "erlaubt"
 	declined: "abgelehnt"
 
-cookies_message: "Diese Website kann analytische Cookies (Google Analytics) zur Auswertung der Besucherzahlen verwenden. Stimmen Sie ihrer Verwendung zu?"
-cookies_message2: "Die Einstellungen können Sie jederzeit ändern."
-cookies_setting: "Cookie-Einstellungen"
+cookies
+    message: "Diese Website kann analytische Cookies (Google Analytics) zur Auswertung der Besucherzahlen verwenden. Stimmen Sie ihrer Verwendung zu?"
+    message2: "Die Einstellungen können Sie jederzeit ändern."
+    setting: "Cookie-Einstellungen"

@@ -53,8 +53,8 @@
 
 <div data-data="cookie-consent" class="cookies-consent-overlay d-none cookie-banner cookie-consent">
   <div class="bg-light rounded p-3" style="max-width: 500px">
-  <p>{_base.cookies_message}</p>
-  <p>{_base.cookies_message2}</p>
+  <p>{_base.cookies.message}</p>
+  <p>{_base.cookies.message2}</p>
   <div class="d-flex gap-2 jc-end ai-center">
     <button data-data="cookies-decline">{_base.action.decline}</button>
     <button data-data="cookies-accept">{_base.action.accept}</button>
@@ -71,7 +71,7 @@
 
 <div>{_base.social_media}: <a href="https://www.instagram.com/crossborderplants/">Instagram</a> &bullet; <a href="https://www.facebook.com/groups/1153309673196666">Facebook</a> &bullet; <a href="https://bsky.app/profile/crossborderplants.bsky.social">BlueSky</a> &bullet; <a href="https://x.com/c_border_plants">X</a></div>
 
-<div class="text-right"><a href="#" class="cookie-consent-overlay-toggle" data-cookie-allowed="{_base.value.allowed}" data-cookie-declined="{_base.value.declined}">{_base.cookies_setting}</a><span data-data="cookie-consent-status"></span> &bullet; 2025{if date('Y') > 2025}&ndash;{date('Y')}{/if} &bullet; {_base.project.name}</div>
+<div class="text-right"><a href="#" class="cookie-consent-overlay-toggle" data-cookie-allowed="{_base.value.allowed}" data-cookie-declined="{_base.value.declined}">{_base.cookies.setting}</a><span data-data="cookie-consent-status"></span> &bullet; 2025{if date('Y') > 2025}&ndash;{date('Y')}{/if} &bullet; {_base.project.name}</div>
 
 </footer>
 {/block}

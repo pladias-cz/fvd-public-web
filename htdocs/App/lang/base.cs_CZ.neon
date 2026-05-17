@@ -39,9 +39,10 @@ seo:
     author: "Jihočeská univerzita"
 social_media: "Sociální sítě"
 
-cookies_message: "Tento web může využívat analytické cookies (Google Analytics) za účelem posuzování návštěvnosti. Souhlasíte s jejich použitím?"
-cookies_message2: "Nastavení můžete pak kdykoliv změnit."
-cookies_setting: "Nastavení cookies"
+cookies:
+    message: "Tento web může využívat analytické cookies (Google Analytics) za účelem posuzování návštěvnosti. Souhlasíte s jejich použitím?"
+    message2: "Nastavení můžete pak kdykoliv změnit."
+    setting: "Nastavení cookies"
 
 species:
 	examples: "Příklady"
