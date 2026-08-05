@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\UI\Base;
 
 use Contributte\Translation\Translator;
+use Nette\Application\Attributes\Persistent;
 use Nette\Application\UI\Presenter;
 
 abstract class BasePresenter extends Presenter
@@ -24,7 +25,7 @@ abstract class BasePresenter extends Presenter
     public const DE_DATE_FORMAT = 'j.n.Y';
     public const EN_DATE_FORMAT = 'j/n/Y';
 
-    /** @persistent */
+    #[Persistent]
     public string $locale = self::LOCALE_CS;
 
     /** @var Translator @inject */

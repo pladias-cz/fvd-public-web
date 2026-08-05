@@ -24,16 +24,20 @@ final class RouterFactory
 
     protected static function buildAdmin(RouteList $router): RouteList
     {
-        $router[] = $list = new RouteList('Admin');
-        $list[] = new Route('[<locale=cs cs|de>/]admin/<presenter>/<action>[/<id>]', 'Home:default');
+
+        $list = new RouteList('Admin');
+        $router->add($list);
+        $list->addRoute('[<locale=cs cs|de>/]admin/<presenter>/<action>[/<id>]', 'Home:default');
 
         return $router;
+
     }
 
     protected static function buildFront(RouteList $router): RouteList
     {
-        $router[] = $list = new RouteList('Front');
-        $list[] = new Route('[<locale=cs cs|de>/]<presenter>/<action>[/<id>]', 'Home:default');
+        $list = new RouteList('Front');
+        $router->add($list);
+        $list->addRoute('[<locale=cs cs|de>/]<presenter>/<action>[/<id>]', 'Home:default');
 
         return $router;
     }
