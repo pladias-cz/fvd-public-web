@@ -156,24 +156,6 @@ class FSGTaxonsService extends BaseService
         return $result->fetchOne();
     }
 
-    public function getPladiasConvertor()
-    {
-        $sql = 'select * FROM bayernflora.convertor_pladias';
-        $query = $this->entityManager->getConnection()->prepare($sql);
-        $result = $query->executeQuery();
-
-        return $result->fetchAllNumeric();
-    }
-
-    public function getBayernConvertor()
-    {
-        $sql = 'select * FROM bayernflora.convertor_bayern';
-        $query = $this->entityManager->getConnection()->prepare($sql);
-        $result = $query->executeQuery();
-
-        return $result->fetchAllNumeric();
-    }
-
     public function getQuadrantOccupation(FSGTaxons $taxon)
     {
         $sql = 'SELECT  :name, s.code , (SELECT ss.description
@@ -205,16 +187,6 @@ class FSGTaxonsService extends BaseService
         return $query->getResult();
     }
 
-    public function getTaxaLatinSorted()
-    {
-        $taxa = $this->findBy(['isFvd' => true], []);
-        $coll = new \Collator('en_US');
-        $coll->sort($taxa, \Collator::SORT_REGULAR);
-
-        //        usort($taxa, function($a, $b) { return (substr($a->nameLat, 0, 1) < substr($b->nameLat, 0, 1)) ? -1 : 1;});
-        return $taxa;
-    }
-
     public function getGbifConvertor(): array
     {
         $sql = 'select g.*, p.name_lat FROM gbif.taxa g JOIN public.taxons p on (p.id=g.pladias_taxon_id)';
@@ -222,5 +194,15 @@ class FSGTaxonsService extends BaseService
         $result = $query->executeQuery();
 
         return $result->fetchAllNumeric();
+    }
+
+    public function getTaxaMappingInfo(FSGTaxons $taxon)
+    {
+        $sql = '';
+
+        $query = $this->getEntityManager()->getConnection()->prepare($sql);
+        $result = $query->executeQuery();
+
+        return $result->fetchOne();
     }
 }

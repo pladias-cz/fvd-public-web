@@ -2775,17 +2775,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pladias-cz/doctrine-mappings.git",
-                "reference": "7178889982e40292b3efee656a55624479ed5755"
+                "reference": "a1b565670015d549c9d6d870977b572ee6b4a24f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pladias-cz/doctrine-mappings/zipball/7178889982e40292b3efee656a55624479ed5755",
-                "reference": "7178889982e40292b3efee656a55624479ed5755",
+                "url": "https://api.github.com/repos/pladias-cz/doctrine-mappings/zipball/a1b565670015d549c9d6d870977b572ee6b4a24f",
+                "reference": "a1b565670015d549c9d6d870977b572ee6b4a24f",
                 "shasum": ""
             },
             "require": {
                 "nettrine/orm": "^0.10",
                 "php": ">= 8.5"
+            },
+            "require-dev": {
+                "contributte/qa": "^0",
+                "friendsofphp/php-cs-fixer": "^3",
+                "mockery/mockery": "^1",
+                "nette/tester": "^2",
+                "phpstan/phpstan": "^2",
+                "symfony/thanks": "^1"
             },
             "default-branch": true,
             "type": "library",
@@ -2794,11 +2802,26 @@
                     "Pladias\\ORM\\": "src/"
                 }
             },
+            "scripts": {
+                "fixer": [
+                    "php-cs-fixer check"
+                ],
+                "fixit": [
+                    "php-cs-fixer fix"
+                ],
+                "phpstan": [
+                    "phpstan analyse --memory-limit=500M --level=7 src"
+                ],
+                "check": [
+                    "@phpstan",
+                    "@fixer"
+                ]
+            },
             "support": {
                 "source": "https://github.com/pladias-cz/doctrine-mappings/tree/main",
                 "issues": "https://github.com/pladias-cz/doctrine-mappings/issues"
             },
-            "time": "2026-07-13T12:37:38+00:00"
+            "time": "2026-08-05T06:25:34+00:00"
         },
         {
             "name": "psr/cache",
