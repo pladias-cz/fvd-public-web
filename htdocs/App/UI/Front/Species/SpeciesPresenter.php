@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\UI\Front\Species;
 
@@ -12,7 +14,12 @@ final class SpeciesPresenter extends UnsecuredPresenter
         $this->hideCzechNames();
     }
 
-    public function hideCzechNames() {
-        if ($this->template->locale == "de") {$this->template->hideCzechNames = "hide-czech-name";} else {$this->template->hideCzechNames = "";}
+    public function hideCzechNames()
+    {
+        if ('de' == $this->template->locale) {
+            $this->template->hideCzechNames = 'hide-czech-name';
+        } else {
+            $this->template->hideCzechNames = '';
+        }
     }
 }

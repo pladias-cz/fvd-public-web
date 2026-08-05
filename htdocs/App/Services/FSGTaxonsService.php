@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Services;
 
@@ -17,12 +19,12 @@ class FSGTaxonsService extends BaseService
 
     public function findAll()
     {
-        return parent::findBy(["isFvd" => TRUE]);
+        return parent::findBy(['isFvd' => true]);
     }
 
     public function lookupAutocomplete($search)
     {
-        $needle = '%' . trim($search) . '%';
+        $needle = '%'.trim($search).'%';
         $sql = "SELECT * FROM (
                 select DISTINCT ON (value) value, id FROM(
 
@@ -56,12 +58,13 @@ class FSGTaxonsService extends BaseService
         $query = $this->getEntityManager()->getConnection()->prepare($sql);
         $query->bindValue('name', $needle);
         $result = $query->executeQuery();
+
         return $result->fetchAllAssociative();
     }
 
     public function findInNames($search)
     {
-        $sql = "SELECT id
+        $sql = 'SELECT id
                 FROM bayernflora.taxons_fsg
  			    WHERE
                   is_fvd = true AND
@@ -70,65 +73,69 @@ class FSGTaxonsService extends BaseService
  			    lower(unaccent(name_cz)) = lower(unaccent(:name))
  			    OR
  			    lower(unaccent(name_de)) = lower(unaccent(:name)))
-                LIMIT 1";
+                LIMIT 1';
 
         $query = $this->getEntityManager()->getConnection()->prepare($sql);
         $query->bindValue('name', $search);
         $result = $query->executeQuery();
+
         return $result->fetchOne();
     }
 
     public function highestOccurence(FSGTaxons $taxon)
     {
         $pladiasTaxa = $this->convertFSG2PladiasIds($taxon);
-        if (count($pladiasTaxa) === 0) {
+        if (0 === count($pladiasTaxa)) {
             return null;
         }
-        $id = implode(",", $pladiasTaxa);
-        $sql = "SELECT max(r.altitude_max) as altitude
+        $id = implode(',', $pladiasTaxa);
+        $sql = 'SELECT max(r.altitude_max) as altitude
                 FROM atlas.records r,
                      geodata.regions g
  			    WHERE
  			          g.id = 1 AND
- 			    r.taxon_id IN (" . $id . ") AND
+ 			    r.taxon_id IN ('.$id.') AND
  			    r.validation_status IN (0,3) AND
- 			    ST_Intersects(r.coords_wgs, g.geom)";
+ 			    ST_Intersects(r.coords_wgs, g.geom)';
 
         $query = $this->getEntityManager()->getConnection()->prepare($sql);
         $result = $query->executeQuery();
+
         return $result->fetchOne();
     }
 
     protected function convertFSG2PladiasIds(FSGTaxons $taxon)
     {
-        $sql = "SELECT c.pladias_taxon
+        $sql = 'SELECT c.pladias_taxon
                 FROM bayernflora.taxons_convertor c
  			    WHERE
- 			    fsg_taxon_id = (:fsg) AND pladias_taxon IS NOT NULL";
+ 			    fsg_taxon_id = (:fsg) AND pladias_taxon IS NOT NULL';
         $query = $this->getEntityManager()->getConnection()->prepare($sql);
         $query->bindValue('fsg', $taxon->id);
         $result = $query->executeQuery();
+
         return $result->fetchFirstColumn();
     }
 
     public function lowestOccurence(FSGTaxons $taxon)
     {
         $pladiasTaxa = $this->convertFSG2PladiasIds($taxon);
-        if (count($pladiasTaxa) === 0) {
+        if (0 === count($pladiasTaxa)) {
             return null;
         }
-        $id = implode(",", $pladiasTaxa);
-        $sql = "SELECT min(r.altitude_min) as altitude
+        $id = implode(',', $pladiasTaxa);
+        $sql = 'SELECT min(r.altitude_min) as altitude
                 FROM atlas.records r,
                      geodata.regions g
  			    WHERE
  			          g.id = 1 AND
- 			    r.taxon_id IN (" . $id . ") AND
+ 			    r.taxon_id IN ('.$id.') AND
  			    r.validation_status IN (0,3) AND
- 			    ST_Intersects(r.coords_wgs, g.geom)";
+ 			    ST_Intersects(r.coords_wgs, g.geom)';
 
         $query = $this->getEntityManager()->getConnection()->prepare($sql);
         $result = $query->executeQuery();
+
         return $result->fetchOne();
     }
 
@@ -145,28 +152,31 @@ class FSGTaxonsService extends BaseService
         $query = $this->getEntityManager()->getConnection()->prepare($sql);
         $query->bindValue('fsg', $taxon->id);
         $result = $query->executeQuery();
+
         return $result->fetchOne();
     }
 
     public function getPladiasConvertor()
     {
-        $sql = "select * FROM bayernflora.convertor_pladias";
+        $sql = 'select * FROM bayernflora.convertor_pladias';
         $query = $this->entityManager->getConnection()->prepare($sql);
         $result = $query->executeQuery();
+
         return $result->fetchAllNumeric();
     }
 
     public function getBayernConvertor()
     {
-        $sql = "select * FROM bayernflora.convertor_bayern";
+        $sql = 'select * FROM bayernflora.convertor_bayern';
         $query = $this->entityManager->getConnection()->prepare($sql);
         $result = $query->executeQuery();
+
         return $result->fetchAllNumeric();
     }
 
     public function getQuadrantOccupation(FSGTaxons $taxon)
     {
-        $sql = "SELECT  :name, s.code , (SELECT ss.description
+        $sql = 'SELECT  :name, s.code , (SELECT ss.description
                          from bayernflora.fvd_geoserver_distribution_aggregated v
                          JOIN atlas.record_validation_status ss ON (ss.id =  v.max_valid_status)
                          WHERE v.fsg_taxon=:fsg
@@ -175,11 +185,12 @@ class FSGTaxonsService extends BaseService
                 FROM geodata.quadrants_full  s
                 JOIN geodata.regions reg ON st_intersects(s.geom_wgs, reg.geom)
                 WHERE reg.id = 4
-                ORDER BY s.code";
+                ORDER BY s.code';
         $query = $this->entityManager->getConnection()->prepare($sql);
         $query->bindValue('fsg', $taxon->id);
         $query->bindValue('name', $taxon->nameLat);
         $result = $query->executeQuery();
+
         return $result->fetchAllNumeric();
     }
 
@@ -196,18 +207,20 @@ class FSGTaxonsService extends BaseService
 
     public function getTaxaLatinSorted()
     {
-        $taxa = $this->findBy(["isFvd" => TRUE], []);
+        $taxa = $this->findBy(['isFvd' => true], []);
         $coll = new \Collator('en_US');
         $coll->sort($taxa, \Collator::SORT_REGULAR);
+
         //        usort($taxa, function($a, $b) { return (substr($a->nameLat, 0, 1) < substr($b->nameLat, 0, 1)) ? -1 : 1;});
         return $taxa;
     }
 
-    public function getGbifConvertor():array
+    public function getGbifConvertor(): array
     {
-        $sql = "select g.*, p.name_lat FROM gbif.taxa g JOIN public.taxons p on (p.id=g.pladias_taxon_id)";
+        $sql = 'select g.*, p.name_lat FROM gbif.taxa g JOIN public.taxons p on (p.id=g.pladias_taxon_id)';
         $query = $this->entityManager->getConnection()->prepare($sql);
         $result = $query->executeQuery();
+
         return $result->fetchAllNumeric();
     }
 }

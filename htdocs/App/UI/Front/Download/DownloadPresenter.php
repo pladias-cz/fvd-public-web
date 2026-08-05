@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\UI\Front\Download;
 
@@ -29,7 +31,7 @@ class DownloadPresenter extends BasePresenter
         $spreadsheet->getActiveSheet()->setTitle($this->translator->translate('download.excel.title'));
         $header = [$this->translator->translate('download.excel.distribution.head.taxon'),
             $this->translator->translate('download.excel.distribution.head.quadrant'),
-            $this->translator->translate('download.excel.distribution.head.present')
+            $this->translator->translate('download.excel.distribution.head.present'),
         ];
         $data = $this->FSGTaxonsService->getQuadrantOccupation($this->taxon);
         $spreadsheet = $this->excelService->easyFillExcel($spreadsheet, $header, $data);
@@ -38,7 +40,7 @@ class DownloadPresenter extends BasePresenter
         $spreadsheet = $this->excelService->setAutosize($spreadsheet, ['A', 'B', 'C']);
 
         $filename = $this->translator->translate('download.excel.distribution.filename')
-            . "-" . $this->getFilenameSuffix();
+            .'-'.$this->getFilenameSuffix();
 
         $this->sendSpreadsheet($spreadsheet, $filename);
     }
@@ -50,7 +52,7 @@ class DownloadPresenter extends BasePresenter
         );
 
         $spreadsheet->getActiveSheet()->setTitle($this->translator->translate('download.excel.title'));
-        $header = ['convertor:id', 'gbif:taxon_key', 'gbif:scientific_name', 'gbif:accepted_taxon_key', 'gbif:accepted_scientific_name', 'gbif:taxon_rank','gbif:species', 'gbif:species_key', 'pladias:id', 'pladias:scientific_name'
+        $header = ['convertor:id', 'gbif:taxon_key', 'gbif:scientific_name', 'gbif:accepted_taxon_key', 'gbif:accepted_scientific_name', 'gbif:taxon_rank', 'gbif:species', 'gbif:species_key', 'pladias:id', 'pladias:scientific_name',
         ];
         $data = $this->FSGTaxonsService->getGbifConvertor();
         $spreadsheet = $this->excelService->easyFillExcel($spreadsheet, $header, $data);
@@ -59,14 +61,14 @@ class DownloadPresenter extends BasePresenter
         $spreadsheet = $this->excelService->setAutosize($spreadsheet, ['A', 'B', 'C']);
 
         $filename = $this->translator->translate('download.excel.convertor_gbif.filename')
-            . "-" . $this->getFilenameSuffix();
+            .'-'.$this->getFilenameSuffix();
 
         $this->sendSpreadsheet($spreadsheet, $filename);
     }
 
-    private function getFilenameSuffix(string $quadFullName = ""): string
+    private function getFilenameSuffix(string $quadFullName = ''): string
     {
-        return $quadFullName . date(BasePresenter::DEFAULT_DATE_FORMAT, time());
+        return $quadFullName.date(BasePresenter::DEFAULT_DATE_FORMAT, time());
     }
 
     private function sendSpreadsheet(Spreadsheet $spreadsheet, string $fileName)

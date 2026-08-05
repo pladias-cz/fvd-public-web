@@ -1,5 +1,6 @@
-<?php declare(strict_types=1);
+<?php
 
+declare(strict_types=1);
 
 namespace App\Services;
 
@@ -11,12 +12,11 @@ use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
 
 class ExcelService
 {
-
     public function __construct(protected readonly Translator $translator)
     {
     }
 
-    public function prepareExcel($title = "FVF")
+    public function prepareExcel($title = 'FVF')
     {
         Settings::setLocale('cs_CZ.utf8');
         $spreadsheet = new Spreadsheet();
@@ -28,38 +28,42 @@ class ExcelService
             ->setLastModifiedBy($this->translator->translate('download.excel.contributors'))
             ->setTitle($title)
             ->setSubject(date('d.j.Y', time()))
-            ->setDescription("")
-            ->setKeywords("fsg export");
+            ->setDescription('')
+            ->setKeywords('fsg export');
 
         $spreadsheet->getActiveSheet()->getStyle('A1:DD1')->getFont()->setBold(true);
+
         return $spreadsheet;
     }
 
     public function easyFillExcel(Spreadsheet $spreadsheet, array $header, array $body): Spreadsheet
     {
         try {
-            $spreadsheet->getActiveSheet()->fromArray($header, NULL, 'A1');
-            $spreadsheet->getActiveSheet()->fromArray($body, NULL, 'A2');
+            $spreadsheet->getActiveSheet()->fromArray($header, null, 'A1');
+            $spreadsheet->getActiveSheet()->fromArray($body, null, 'A2');
         } catch (Exception $exception) {
         }
+
         return $spreadsheet;
     }
 
     public function setItalic(Spreadsheet $spreadsheet, string $range): Spreadsheet
     {
         try {
-            $spreadsheet->getActiveSheet()->getStyle($range)->getFont()->setItalic(TRUE);
+            $spreadsheet->getActiveSheet()->getStyle($range)->getFont()->setItalic(true);
         } catch (Exception $exception) {
         }
+
         return $spreadsheet;
     }
 
     public function setBold(Spreadsheet $spreadsheet, string $range): Spreadsheet
     {
         try {
-            $spreadsheet->getActiveSheet()->getStyle($range)->getFont()->setBold(TRUE);
+            $spreadsheet->getActiveSheet()->getStyle($range)->getFont()->setBold(true);
         } catch (Exception $exception) {
         }
+
         return $spreadsheet;
     }
 
@@ -71,6 +75,7 @@ class ExcelService
             }
         } catch (Exception $exception) {
         }
+
         return $spreadsheet;
     }
 
@@ -83,6 +88,7 @@ class ExcelService
             }
         } catch (Exception $exception) {
         }
+
         return $spreadsheet;
     }
 }

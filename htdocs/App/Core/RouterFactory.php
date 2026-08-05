@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Core;
 
@@ -8,7 +10,6 @@ use Nette\StaticClass;
 
 final class RouterFactory
 {
-
     use StaticClass;
 
     public static function createRouter(): RouteList
@@ -36,5 +37,4 @@ final class RouterFactory
 
         return $router;
     }
-
 }

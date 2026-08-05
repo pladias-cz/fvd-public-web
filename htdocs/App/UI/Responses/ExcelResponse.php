@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\UI\Responses;
 
@@ -8,7 +10,6 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;
 
 class ExcelResponse implements Nette\Application\Response
 {
-
     private Spreadsheet $spreadsheet;
     private string $filename;
 
@@ -21,8 +22,8 @@ class ExcelResponse implements Nette\Application\Response
     public function send(Nette\Http\IRequest $httpRequest, Nette\Http\IResponse $httpResponse): void
     {
         $httpResponse->setContentType('application/force-download', 'utf-8')
-            ->setHeader('Content-Disposition', 'attachment;filename=' .
-                Nette\Utils\Strings::webalize($this->filename) . ".xlsx")
+            ->setHeader('Content-Disposition', 'attachment;filename='.
+                Nette\Utils\Strings::webalize($this->filename).'.xlsx')
             ->setHeader('CacheControl', 'max-age=0')
             ->setHeader('Content-Transfer-Encoding', 'binary');
         $writer = IOFactory::createWriter($this->spreadsheet, 'Xlsx');
