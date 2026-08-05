@@ -228,6 +228,29 @@ nav > div > div:nth-of-type(1) {
     justify-self: end;
   }
 
+// pozvánky
+
+.invitation-500 {max-width: 500px;}
+.invitation-350 {max-width: 350px;}
+
+.cookies-consent-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: calc(var(--spacer) * 2);
+}
+
+@media (max-width: 500px) {
+    .invitation-500, .invitation-350 {max-width: 100%;}
+}
+
 @media (max-width: 800px) {
     .contact-container {grid-template-columns: 1fr;}
     .contact-names > div > span:nth-child(2n+1) {display: flex; gap: var(--spacer); flex-direction: column;}

@@ -11,8 +11,14 @@
 .mt-4 {margin-top: calc(var(--spacer) * 4);}
 .mt-5 {margin-top: calc(var(--spacer) * 5);}
 
+.p-0 {padding: 0;}
+.p-1 {padding: calc(var(--spacer));}
+.p-2 {padding: var(--spacer2);}
+.p-3 {padding: var(--spacer3);}
+
 .px-3 {padding-inline: calc(var(--spacer) * 3) ;}
 
+.gap-2 {gap: var(--spacer2);}
 .gap-3 {gap: calc(var(--spacer) * 3)}
 .gap-4 {gap: calc(var(--spacer) * 4)}
 .gap-15 {gap: calc(var(--spacer) * 15)}
@@ -23,6 +29,9 @@
 .grid-80-20 {grid-template-columns: 8fr 2fr;}
 .grid-2 {grid-template-columns: repeat(2, 1fr);}
 
+.jc-end {justify-content: end;}
+.ai-center {align-items: center;}
+
 @media (max-width: 600px) {
     .grid-80-20 {grid-template-columns: 1fr;}
 }
@@ -32,6 +41,8 @@
 .nowrap {flex-wrap: nowrap;}
 
 .w-max-content {width: max-content; max-width: 100%;}
+
+.rounded {border-radius: var(--spacer);}
 
 .text-right {text-align: right;}
 .text-italic {font-style: italic;}

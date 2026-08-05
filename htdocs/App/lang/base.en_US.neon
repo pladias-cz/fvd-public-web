@@ -31,3 +31,8 @@ seo:
     keywords: "vascular plants, plants, flora, database, botany"
     description: ""
     author: " Jihočeská univerzita"
+
+cookies:
+    message: "This website may use analytical cookies (Google Analytics) to evaluate website traffic. Do you agree to their use?"
+    message2: "You can change this anytime in the future."
+    setting: "Cookies settings"
