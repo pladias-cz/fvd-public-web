@@ -32,6 +32,7 @@ class DownloadPresenter extends BasePresenter
         $header = [$this->translator->translate('download.excel.distribution.head.taxon'),
             $this->translator->translate('download.excel.distribution.head.quadrant'),
             $this->translator->translate('download.excel.distribution.head.present'),
+            'Manual distribution','PLADIAS', 'SNSB', 'GBIF', 'GBIF Austria only'
         ];
         $data = $this->FSGTaxonsService->getQuadrantOccupation($this->taxon);
         $spreadsheet = $this->excelService->easyFillExcel($spreadsheet, $header, $data);

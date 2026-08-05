@@ -36,5 +36,6 @@ final class TaxonPresenter extends UnsecuredPresenter
         $this->template->title = $taxon->nameLat;
         $this->template->taxon = $taxon;
         $this->template->oldestRecord = $this->fsgTaxonService->yearOfOldestRecord($taxon);
+        $this->template->austriaOnly = $this->fsgTaxonService->getAustriaOnlyMapping($taxon);
     }
 }
