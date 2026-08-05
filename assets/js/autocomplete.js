@@ -65,7 +65,7 @@ export default function autocomplete() {
                 e.preventDefault();
                 if (currentFocus > -1 && items[currentFocus]) {
                     items[currentFocus].click();
-                } else if (this.dataset.listenEnter) {
+                } else if (this.dataset.listenEnter && this.value.trim().length > 0) {
                     document.body.style.cursor = 'wait';
                     const newLocation = getAppBasePath() + this.dataset.target + '/' + encodeURIComponent(this.value);
                     redirect(newLocation);

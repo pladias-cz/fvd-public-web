@@ -6,8 +6,66 @@
 <h1>{_base.project.name}</h1>
 <h2>{_home.news}</h2>
 
+{if $locale == 'de'}
+<p>Wir haben für dieses Jahr eine Reihe von Veranstaltungen auf tschechischer wie auf österreichischer Seite für Sie vorbereitet. Mehr dazu finden Sie <a n:href="Home:publicity">auf der Veranstaltungsseite</a>.</p>
+
+<p>Die nächste Exkursion findet am Samstag, den 20. Juni, statt. Sie führt zum rechten Ufer des Lipno-Sees, und es werden Partner aus Tschechien und Oberösterreich daran teilnehmen. Treffpunkt ist um 9:30 Uhr auf dem Parkplatz in Zadní Zvonková; die Veranstaltung ist auch für die breite Öffentlichkeit zugänglich. Die Erläuterungen werden in beide Sprachen gedolmetscht.</p>
+
+<div class="d-flex wrap gallery-clickable w-max-content">
+		<a class="picture-link" href="{$basePath}/images_news/zvonkova_pozvanka.jpg"><img src="{$basePath}/images_news/zvonkova_pozvanka.jpg" class='invitation-350' alt=""></a>
+</div>
+
+
+	{if (false)}
+	<p>Unten finden Sie die Einladung zur nächsten Exkursion.</p>
+
+	<div class="d-flex wrap gallery-clickable w-max-content">
+		<a class="picture-link" href="{$basePath}/images_news/pozvanka_rybnik.jpg"><img src="{$basePath}/images_news/pozvanka_rybnik.jpg" class='invitation-350' alt=""></a>
+	</div>
+	{/if}
+
+{/if}
+
+{if $locale == 'cs'}
+<p>Připravili jsme pro vás na letošní rok řadu akcí na české i rakouské straně. Více najdete <a n:href="Home:publicity">na stránce s událostmi</a>.</p>
+
+<p>Nejbližší exkurze proběhne v sobotu 20. 6. Bude směřovat na pravý břeh Lipna, zúčastní se jí partneři z Česka i z Horního Rakouska. Sraz v 9:30 na parkovišti v Zadní Zvonkové. Akce je i pro širokou veřejnost, výklad bude tlumočen do obou jazyků.</p>
+
+<div class="d-flex wrap gallery-clickable w-max-content">
+		<a class="picture-link" href="{$basePath}/images_news/zvonkova_pozvanka.jpg"><img src="{$basePath}/images_news/zvonkova_pozvanka.jpg" class='invitation-350' alt=""></a>
+</div>
+
+
+	{if (false)}
+	<p>Níže najdete pozvánku na nejbližší exkurzi.</p>
+
+	<div class="d-flex wrap gallery-clickable w-max-content">
+		<a class="picture-link" href="{$basePath}/images_news/pozvanka_rybnik.jpg"><img src="{$basePath}/images_news/pozvanka_rybnik.jpg" class='invitation-350' alt=""></a>
+	</div>
+	{/if}
+
+{/if}
 
 {if $locale == 'de'}
+<h3>Mai 2026: Exkursion nach Gutau</h3>
+<p>Am 30.05.2026 fand unter guten Wetterbedingungen die Biodiversitäts-Exkursion in die Region Gutau statt. Zahlreiche Mitglieder der Mykologischen-, Entomologischen- und Botanischen-Arbeitsgemeinschaften sowie Kollegen des tschechischen Interreg-Partners nahmen daran teil. Insgesamt waren es 35 Personen, die die einmalige Natur des Aist-Naarn-Kuppenland erforschten.</p>
+
+<div class="d-flex wrap gallery-clickable w-max-content">
+{include photo, 'images_news/gutau', "gutau1_renthaler.jpg", "", "H.-P. Reinthaler"}
+{include photo, 'images_news/gutau', "gutau2_kleesadl.jpg", "", "Gerhard Kleesadl"}
+{include photo, 'images_news/gutau', "gutau3_pils.jpg", "", "Erwin Pils"}
+{include photo, 'images_news/gutau', "gutau4_reinthaler.jpg", "", "H.-P. Reinthaler"}
+</div>
+
+<h3>Marz 2026: Workshop mit der Böhmerwaldschule</h3>
+<p>Bei einem Workshop in der Böhmerwaldschule bei Ulrichsberg stellten wir unser Projekt und die Bestimmungs-App „ObsIdentify“ vor. Die Teilnehmer:innen wollen diese App nun in die Vermittlungsarbeit integrieren und so v.a. Kinder und Jugendliche an Citizen-Science heranführen.</p>
+
+<div class="d-flex wrap gallery-clickable w-max-content">
+{include photo, 'images_news/aktuality_cervenec25_dale', "ws_1.jpg", "", ""}
+{include photo, 'images_news/aktuality_cervenec25_dale', "ws_2.jpg", "", ""}
+{include photo, 'images_news/aktuality_cervenec25_dale', "ws_3.jpg", "", ""}
+</div>
+
 <h3>Februar 2026</h3>
 <p>Am 5. 2. fand an der Naturwissenschaftlichen Fakultät der Universität Südböhmen in České Budějovice das jährliche Treffen der Teammitglieder aus Tschechien und Österreich statt. Nach der Präsentation der Ergebnisse des vergangenen Jahres diskutierten wir den Plan für alle Projektaktivitäten und vereinbarten den Zeitplan für dieses Jahr.</p>
 
@@ -15,6 +73,8 @@
 {include photo, 'images_news/aktuality_cervenec25_dale', "meeting_leden_1.jpg", "", ""}
 {include photo, 'images_news/aktuality_cervenec25_dale', "meeting_leden_2.jpg", "", ""}
 </div>
+
+
 
 <h3>November 2025</h3>
 <p>Am 25. 11. fand in Linz ein Treffen eines Teils des tschechischen und österreichischen Teams statt. Wir präsentierten die Ergebnisse der vergangenen Saison auf beiden Seiten der Grenze, diskutierten Erfahrungen und planten weitere Schritte im Projekt.</p>
@@ -73,6 +133,25 @@
 
 
 {if $locale == 'cs'}
+<h3>Květen 2026: Exkurze do Gutau</h3>
+<p>30. května se uskutečnila exkurze do regionu Gutau. Počasí návštěvě terénu přálo, exkurze se zúčastnili členové mykologických, entomologických a botanických pracovních skupin i kolegové z Česka v rámci projektu Interreg. Události v jedinečné krajině Aist-Naarn-Kuppenland se celkem účastnilo 35 osob.</p>
+
+<div class="d-flex wrap gallery-clickable w-max-content">
+{include photo, 'images_news/gutau', "gutau1_renthaler.jpg", "", "H.-P. Reinthaler"}
+{include photo, 'images_news/gutau', "gutau2_kleesadl.jpg", "", "Gerhard Kleesadl"}
+{include photo, 'images_news/gutau', "gutau3_pils.jpg", "", "Erwin Pils"}
+{include photo, 'images_news/gutau', "gutau4_reinthaler.jpg", "", "H.-P. Reinthaler"}
+</div>
+
+<h3>Březen 2026: Workshop s Böhmerwaldschule</h3>
+<p>Na workshopu v Böhmerwaldschule u Ulrichsbergu jsme představili náš projekt a určovací aplikaci „ObsIdentify“. Tuto aplikaci chceme nově zapojit do vzdělávacích aktivit a přiblížit tak občanskou vědu zejména dětem a mladým lidem.</p>
+
+<div class="d-flex wrap gallery-clickable w-max-content">
+{include photo, 'images_news/aktuality_cervenec25_dale', "ws_1.jpg", "", ""}
+{include photo, 'images_news/aktuality_cervenec25_dale', "ws_2.jpg", "", ""}
+{include photo, 'images_news/aktuality_cervenec25_dale', "ws_3.jpg", "", ""}
+</div>
+
 <h3>Únor 2026</h3>
 <p>5. 2. proběhla na PřF JU v Českých Budějovicích každoroční schůzka členů týmu z ČR i Rakouska. Po prezentaci výsledků z minulého roku jsme diskutovali plán pro všechny aktivity projektu a dohodli jsme časový harmonogram pro letošní rok.</p>
 

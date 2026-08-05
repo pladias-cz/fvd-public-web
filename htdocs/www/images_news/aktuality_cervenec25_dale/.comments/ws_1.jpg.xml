@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comment version="3.0">
+  <caption/>
+  <note>filter: 0; fileterIntensity: 0.0; filterMask: 0; captureOrientation: 0;
+algolist: 0;
+multi-frame: 1;
+brp_mask:8;
+brp_del_th:0.0018,0.0000;
+brp_del_sen:0.1300,0.0000;
+motionR: 0;
+delta:null;
+bokeh:0;
+module: photo;hw-remosaic: false;touch: (-1.0, -1.0);sceneMode: 7864320;cct_value: 0;AI_Scene: (-1, -1);aec_lux: 181.51886;aec_lux_index: 0;albedo:  ;confidence:  ;motionLevel: 65537;weatherinfo: null;temperature: 24;</note>
+  <place/>
+  <categories/>
+</comment>
