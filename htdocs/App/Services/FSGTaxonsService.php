@@ -196,7 +196,7 @@ class FSGTaxonsService extends BaseService
                             LIMIT 1),
                         --GBIF
                         (
-                        SELECT r.id
+                        SELECT \'https://www.gbif.org/occurrence/\' || r.id
                             FROM bayernflora.taxons_convertor tc
                             JOIN gbif.taxa gt
                               ON gt.pladias_taxon_id = tc.pladias_taxon
@@ -211,7 +211,7 @@ class FSGTaxonsService extends BaseService
                         ),
                         --GBIF Austria only
                         (
-                        SELECT r.id
+                        SELECT \'https://www.gbif.org/occurrence/\' || r.id
                             FROM gbif.taxa t
                             JOIN gbif.records r
                               ON r.taxon_col_id = t.col_id
