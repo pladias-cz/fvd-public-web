@@ -28,12 +28,14 @@
 .d-grid {display: grid;}
 .grid-80-20 {grid-template-columns: 8fr 2fr;}
 .grid-2 {grid-template-columns: repeat(2, 1fr);}
+.grid-5 {grid-template-columns: repeat(5, 1fr);}
+.grid-auto {grid-template-columns: repeat(auto-fit, minmax(0, 1fr));}
 
 .jc-end {justify-content: end;}
 .ai-center {align-items: center;}
 
 @media (max-width: 600px) {
-    .grid-80-20 {grid-template-columns: 1fr;}
+    .grid-80-20, .grid-2, .grid-5, .grid-auto {grid-template-columns: 1fr;}
 }
 
 .d-none {display: none;}

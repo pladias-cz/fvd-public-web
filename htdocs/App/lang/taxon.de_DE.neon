@@ -1,4 +1,5 @@
 map:
+  downloadData: Daten herunterladen
   mapSettings: Einstellungen
   mapInfo: Datenquelle
   layers: Layer
@@ -53,3 +54,7 @@ images:
 factsheet:
     link: "PDF"
     distribution: "Verbereitung"
+
+distributionManual:
+  automatic: "automatisch"
+  manual: "manuell"

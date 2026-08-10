@@ -1,4 +1,5 @@
 map:
+  downloadData: Stáhnout data
   mapSettings: Nastavení mapy
   mapInfo: Informace o mapování
   layers: Vrstvy
@@ -52,3 +53,7 @@ images:
 factsheet:
     link: "Data ke stažení"
     distribution: "Rozšíření"
+
+distributionManual:
+  automatic: "automaticky"
+  manual: "ručně"

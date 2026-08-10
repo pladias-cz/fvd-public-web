@@ -1,0 +1,6 @@
+map:
+  downloadData: Download data
+
+distributionManual:
+  automatic: "automatically"
+  manual: "manually"

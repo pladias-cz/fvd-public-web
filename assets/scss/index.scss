@@ -16,9 +16,14 @@
     --max-container-width: 1300px;
 }
 
+.bg-light {background-color: var(--light);}
+
 h1, h2, h3, h4, h5, h6 {width: max-content; max-width: 100%;}
-h1 {border-bottom: 4px solid var(--quarternary); margin-top: calc(var(--spacer) * 2);}
-h2 {border-bottom: 2px solid var(--quarternary);}
+h1 {border-bottom: 4px solid var(--quarternary); margin-top: calc(var(--spacer) * 2); font-size: 2rem;}
+h2 {border-bottom: 2px solid var(--quarternary); font-size: 1.6rem;}
+h3 {font-size: 1.3rem;}
+h4 {font-size: 1.125rem;}
+h5 {margin-bottom: var(--spacer); font-size: 1rem;}
 
 body {
     font-family: var(--font);
