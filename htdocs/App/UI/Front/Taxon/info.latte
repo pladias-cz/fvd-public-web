@@ -68,27 +68,27 @@
     <h3 class="mb-0"><i>{$taxon->nameLat}</i> – {$taxon->getName($locale)}</h3>
 </div>
 
-<h4>Data</h4>
+<h4 class='mb-0'>Data</h4>
 {*TODO kolik odkud záznamů + vždy jeden záznam z kvadrantu s nějakými detaily (origname na gbif atp).*}
 
 <div class="d-grid grid-auto gap-2">
     
     <div n:if="count($taxon->bayernTaxa) > 0">
-        <h5 class="p-2 bg-light rounded">SNSB Münich</h5>
+        <h5 class="mt-0 p-2 bg-light rounded">SNSB Münich</h5>
         {foreach $taxon->bayernTaxa as $bayern}
         {$bayern->nameLatFull}
         {/foreach}
     </div>
 
     <div n:if="count($taxon->pladiasTaxa) > 0">
-        <h5 class="p-2 bg-light rounded">Pladias</h5>
+        <h5 class="mt-0 p-2 bg-light rounded">Pladias</h5>
         {foreach $taxon->pladiasTaxa as $pladias}
         {$pladias->nameLatin}
         {/foreach}
     </div>
 
     <div n:if="count($taxon->distributionNonautomatic) > 0">
-        <h5 class="p-2 bg-light rounded">Distribution Manual</h5>
+        <h5 class="mt-0 p-2 bg-light rounded">Distribution Manual</h5>
         <ul>
             {foreach $taxon->distributionNonautomatic as $zmizik}
             <li>
@@ -103,7 +103,7 @@
     </div>
 
     <div n:if="count($taxon->pladiasTaxa) > 0">
-        <h5 class="p-2 bg-light rounded">GBIF</h5>
+        <h5 class="mt-0 p-2 bg-light rounded">GBIF</h5>
         <ul>
             {foreach $taxon->pladiasTaxa as $pladias}
                 {foreach $pladias->gbifTaxa as $gbif}
@@ -119,7 +119,7 @@
     </div>
 
     <div n:if="count($austriaOnly) > 0">
-        <h5 class="p-2 bg-light rounded">GBIF Austria only</h5>
+        <h5 class="mt-0 p-2 bg-light rounded">GBIF Austria only</h5>
         <ul class="mb-0">
             {foreach $austriaOnly as $austriaGbif}
                 <li>
