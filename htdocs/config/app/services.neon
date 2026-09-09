@@ -2,6 +2,7 @@ services:
     - App\Core\RouterFactory::createRouter
     - App\Services\WebDir(%wwwDir%)
     - App\Services\TempDir(%tempDir%)
+    - App\Services\CacheCleaner(%tempDir%, %system.cacheClear.passwordHash%)
 
 
 search:

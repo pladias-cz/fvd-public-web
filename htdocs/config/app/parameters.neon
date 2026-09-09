@@ -4,6 +4,12 @@ parameters:
         error:
             email: krkabol@gmail.com
             presenter: Error
+        cacheClear:
+            # disabled while null. To enable /system/clear-cache, set this to a bcrypt hash generated with:
+            # php -r "echo password_hash('yourpassword', PASSWORD_DEFAULT), PHP_EOL;"
+            # Note: this file is committed to a public repo, so use a strong, unique password -
+            # the hash itself is safe to publish, but a weak password behind it can be brute-forced offline.
+            passwordHash: '$2y$12$Nekq1H01m2ClNY4hd0nPoeZmH1.201b3CNEccDkXqH/6S5uIbAJS2'
 
     slave:
         driver: pdo_pgsql
