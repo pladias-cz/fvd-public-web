@@ -72,50 +72,51 @@
 {*TODO kolik odkud záznamů + vždy jeden záznam z kvadrantu s nějakými detaily (origname na gbif atp).*}
 
 <div class="d-grid grid-auto gap-2">
-    
+
     <div n:if="count($taxon->bayernTaxa) > 0">
         <h5 class="mt-0 p-2 bg-light rounded">SNSB Münich</h5>
         {foreach $taxon->bayernTaxa as $bayern}
-        {$bayern->nameLatFull}
+        {$bayern->nameLatFull}{sep}, {/sep}
         {/foreach}
     </div>
 
     <div n:if="count($taxon->pladiasTaxa) > 0">
         <h5 class="mt-0 p-2 bg-light rounded">Pladias</h5>
         {foreach $taxon->pladiasTaxa as $pladias}
-        {$pladias->nameLatin}
+        {$pladias->nameHtml|noescape}{sep}, {/sep}
+        {/foreach}
+    </div>
+
+    <div n:if="count($pladiasChildren) > 0">
+        <h5 class="mt-0 p-2 bg-light rounded">Pladias Inherited</h5>
+        {foreach $pladiasChildren as $pladiasInherited}
+        {$pladiasInherited->nameHtml|noescape}{sep}, {/sep}
         {/foreach}
     </div>
 
     <div n:if="count($taxon->distributionNonautomatic) > 0">
         <h5 class="mt-0 p-2 bg-light rounded">Distribution Manual</h5>
-        <ul>
+
             {foreach $taxon->distributionNonautomatic as $zmizik}
-            <li>
                 <strong>{$zmizik->quadrant->code}</strong> –
                 {$zmizik->status->description}
                 <small>
                     ({if $zmizik->createdByMachine}{_taxon.distributionManual.automatic}{else}{_taxon.distributionManual.manual}{/if})
-                </small>
-            </li>
+                </small>{sep}, {/sep}
             {/foreach}
-        </ul>
+
     </div>
 
     <div n:if="count($taxon->pladiasTaxa) > 0">
         <h5 class="mt-0 p-2 bg-light rounded">GBIF</h5>
-        <ul>
             {foreach $taxon->pladiasTaxa as $pladias}
                 {foreach $pladias->gbifTaxa as $gbif}
-                    <li>
                         <span>{$gbif->scientificName}</span> –
                         <a href="https://www.catalogueoflife.org/data/taxon/{$gbif->colTaxonId}">
                             <small>{$gbif->colTaxonId}</small>
-                        </a>
-                    </li>
+                        </a>{sep}, {/sep}
                 {/foreach}
             {/foreach}
-        </ul>
     </div>
 
     <div n:if="count($austriaOnly) > 0">

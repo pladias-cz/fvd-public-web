@@ -8,6 +8,7 @@ use Contributte\Translation\Translator;
 use Doctrine\ORM\EntityManagerInterface;
 use Pladias\ORM\Entity\Bayernflora\FSGTaxons;
 use Pladias\ORM\Entity\Gbif\Taxa;
+use Pladias\ORM\Entity\Public\Taxons;
 
 class FSGTaxonsService extends BaseService
 {
@@ -266,6 +267,35 @@ class FSGTaxonsService extends BaseService
 
         return $this->entityManager
             ->getRepository(Taxa::class)
+            ->findBy(['id' => $ids]);
+    }
+
+    /**
+     * @return Taxons[]
+     */
+    public function getPladiasChildren(FSGTaxons $taxon): array
+    {
+        $ids = [];
+        foreach ($taxon->pladiasTaxa as $directlyLinkedPladiasTaxon
+        ) {
+            $sql = 'SELECT id FROM public.taxons_clear WHERE lft  > :lft and rgt < :rgt';
+
+            $subTaxaIds = $this->entityManager
+                ->getConnection()
+                ->executeQuery($sql, ['lft' => $directlyLinkedPladiasTaxon->lft, 'rgt' => $directlyLinkedPladiasTaxon->rgt])
+                ->fetchFirstColumn();
+
+            $ids = array_merge($ids, $subTaxaIds);
+        }
+
+        if ($ids === []) {
+            return [];
+        }
+
+        $ids = array_values(array_unique($ids));
+
+        return $this->entityManager
+            ->getRepository(Taxons::class)
             ->findBy(['id' => $ids]);
     }
 }
