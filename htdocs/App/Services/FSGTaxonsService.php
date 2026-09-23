@@ -176,7 +176,7 @@ class FSGTaxonsService extends BaseService
             $pladiasDescendants = array_merge(
                 $pladiasDescendants,
                 $result->fetchFirstColumn()
-            );
+            );  
         }
 
         $pladiasDescendants = array_unique($pladiasDescendants);
