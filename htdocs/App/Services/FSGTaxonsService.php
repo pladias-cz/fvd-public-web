@@ -164,6 +164,23 @@ class FSGTaxonsService extends BaseService
          * přidává se tam vždy odkaz na jeden záznam z daného zdroje aby šlo dohledat čím je daný kvadrant podpořený
          * u GBIF je velmi pravděpodobně ještě špatně že se neodfiltrovávají jen ZOBODAT zázamy- alae zase může být užitečné vidět že jiný GBIF zdroj to poskytuje..?
          */
+
+        //získáme celý podstrom taxonů včetně parenta pro všechny přilinkované
+        $sql = 'SELECT pladias_functions.descendant_taxon(:parent)';
+        $pladiasDescendants = [];
+        foreach ($taxon->pladiasTaxa as $directlyLinkedPladiasTaxon) {
+            $query = $this->entityManager->getConnection()->prepare($sql);
+            $query->bindValue('parent', $directlyLinkedPladiasTaxon->id);
+            $result = $query->executeQuery();
+
+            $pladiasDescendants = array_merge(
+                $pladiasDescendants,
+                $result->fetchFirstColumn()
+            );
+        }
+
+        $pladiasDescendants = array_unique($pladiasDescendants);
+
         $sql = 'SELECT  :name, s.code , (SELECT ss.description
                          from bayernflora.fvd_geoserver_distribution_aggregated v
                          JOIN atlas.record_validation_status ss ON (ss.id =  v.max_valid_status)
@@ -176,12 +193,11 @@ class FSGTaxonsService extends BaseService
                         --pladias
                         (
                              SELECT \'https://pladias.ibot.cas.cz/recordEdit/recordId/\' || r.id
-                            FROM bayernflora.taxons_convertor tc
-                            JOIN atlas.records r
-                              ON r.taxon_id = tc.pladias_taxon
+                            FROM  atlas.records r
+
                             JOIN atlas.record_validation_status vs
                               ON vs.id = r.validation_status
-                            WHERE tc.fsg_taxon_id = :fsg
+                            WHERE r.taxon_id = ANY(:pladiasDescendants::integer[])
                               AND ST_Contains(s.geom_wgs, r.coords_wgs)
                             ORDER BY vs.priority DESC, r.id
                             LIMIT 1
@@ -227,6 +243,11 @@ class FSGTaxonsService extends BaseService
         $query = $this->entityManager->getConnection()->prepare($sql);
         $query->bindValue('fsg', $taxon->id);
         $query->bindValue('name', $taxon->nameLat);
+        $query->bindValue(
+            'pladiasDescendants',
+            '{' . implode(',', $pladiasDescendants) . '}'
+        );
+
         $result = $query->executeQuery();
 
         return $result->fetchAllNumeric();
@@ -275,6 +296,14 @@ class FSGTaxonsService extends BaseService
      */
     public function getPladiasChildren(FSGTaxons $taxon): array
     {
+
+        return $this->entityManager
+            ->getRepository(Taxons::class)
+            ->findBy(['id' => $this->getPladiasChildrenIds($taxon)]);
+    }
+
+    protected function getPladiasChildrenIds(FSGTaxons $taxon): array
+    {
         $ids = [];
         foreach ($taxon->pladiasTaxa as $directlyLinkedPladiasTaxon
         ) {
@@ -292,10 +321,6 @@ class FSGTaxonsService extends BaseService
             return [];
         }
 
-        $ids = array_values(array_unique($ids));
-
-        return $this->entityManager
-            ->getRepository(Taxons::class)
-            ->findBy(['id' => $ids]);
+        return array_values(array_unique($ids));
     }
 }
