@@ -26,7 +26,7 @@ class FSGTaxonsService extends BaseService
 
     public function lookupAutocomplete($search)
     {
-        $needle = '%' . trim($search) . '%';
+        $needle = '%'.trim($search).'%';
         $sql = "SELECT * FROM (
                 select DISTINCT ON (value) value, id FROM(
 
@@ -96,7 +96,7 @@ class FSGTaxonsService extends BaseService
                      geodata.regions g
  			    WHERE
  			          g.id = 1 AND
- 			    r.taxon_id IN (' . $id . ') AND
+ 			    r.taxon_id IN ('.$id.') AND
  			    r.validation_status IN (0,3) AND
  			    ST_Intersects(r.coords_wgs, g.geom)';
 
@@ -131,7 +131,7 @@ class FSGTaxonsService extends BaseService
                      geodata.regions g
  			    WHERE
  			          g.id = 1 AND
- 			    r.taxon_id IN (' . $id . ') AND
+ 			    r.taxon_id IN ('.$id.') AND
  			    r.validation_status IN (0,3) AND
  			    ST_Intersects(r.coords_wgs, g.geom)';
 
@@ -165,7 +165,7 @@ class FSGTaxonsService extends BaseService
          * u GBIF je velmi pravděpodobně ještě špatně že se neodfiltrovávají jen ZOBODAT zázamy- alae zase může být užitečné vidět že jiný GBIF zdroj to poskytuje..?
          */
 
-        //získáme celý podstrom taxonů včetně parenta pro všechny přilinkované
+        // získáme celý podstrom taxonů včetně parenta pro všechny přilinkované
         $sql = 'SELECT pladias_functions.descendant_taxon(:parent)';
         $pladiasDescendants = [];
         foreach ($taxon->pladiasTaxa as $directlyLinkedPladiasTaxon) {
@@ -176,7 +176,7 @@ class FSGTaxonsService extends BaseService
             $pladiasDescendants = array_merge(
                 $pladiasDescendants,
                 $result->fetchFirstColumn()
-            );  
+            );
         }
 
         $pladiasDescendants = array_unique($pladiasDescendants);
@@ -245,7 +245,7 @@ class FSGTaxonsService extends BaseService
         $query->bindValue('name', $taxon->nameLat);
         $query->bindValue(
             'pladiasDescendants',
-            '{' . implode(',', $pladiasDescendants) . '}'
+            '{'.implode(',', $pladiasDescendants).'}'
         );
 
         $result = $query->executeQuery();
@@ -282,7 +282,7 @@ class FSGTaxonsService extends BaseService
             ->executeQuery($sql, ['fsg' => $taxon->id])
             ->fetchFirstColumn();
 
-        if ($ids === []) {
+        if ([] === $ids) {
             return [];
         }
 
@@ -296,7 +296,6 @@ class FSGTaxonsService extends BaseService
      */
     public function getPladiasChildren(FSGTaxons $taxon): array
     {
-
         return $this->entityManager
             ->getRepository(Taxons::class)
             ->findBy(['id' => $this->getPladiasChildrenIds($taxon)]);
@@ -317,7 +316,7 @@ class FSGTaxonsService extends BaseService
             $ids = array_merge($ids, $subTaxaIds);
         }
 
-        if ($ids === []) {
+        if ([] === $ids) {
             return [];
         }
 

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Core;
 
-use Nette\Application\Routers\Route;
 use Nette\Application\Routers\RouteList;
 use Nette\StaticClass;
 
@@ -24,13 +23,11 @@ final class RouterFactory
 
     protected static function buildAdmin(RouteList $router): RouteList
     {
-
         $list = new RouteList('Admin');
         $router->add($list);
         $list->addRoute('[<locale=cs cs|de>/]admin/<presenter>/<action>[/<id>]', 'Home:default');
 
         return $router;
-
     }
 
     protected static function buildFront(RouteList $router): RouteList
